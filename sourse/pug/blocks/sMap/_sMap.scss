@@ -1,0 +1,306 @@
+// start .sMap
+.sMap {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(0)};
+	background-color: $gray-100;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(35)};
+		--sPB: #{rem(31)};
+		
+		background-color: $gray-200;
+		min-height: rem(664);
+	}
+	&__container {
+		width: 100%;
+		height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+	}
+	.img {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 71%;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+	.section-title {
+		position: relative;
+		z-index: 3;
+		&__row {
+			--bs-gutter-y: #{rem(11)};
+		}
+		h2 {
+			margin-bottom: 0;
+			font-size: rem(25);
+			@include media-breakpoint-up(md) {
+				font-size: rem(36);
+			}
+		}
+		&__regions {
+			display: flex;
+			align-items: center;
+			color: $primary;
+			span {
+				line-height: 1.11em;
+				font-weight: 700;
+				margin-right: rem(8);
+				font-size: rem(25);
+				@include media-breakpoint-up(md) {
+					font-size: rem(36);
+				}
+			}
+			p {
+				margin-bottom: 0;
+				font-weight: 600;
+				font-size: rem(14);
+				max-width: rem(161);
+				line-height: 1.14em;
+			}
+		}
+	}
+	&__map{
+		position: absolute;
+		z-index: 1;
+		@include media-breakpoint-up(md) {
+			left: 24.1%;
+			top: 47.5%;
+			transform: translateY(-50%);
+			width: rem(1246);
+		}
+	}
+	.popover-toggle {
+		position: relative;
+		// &:before {
+		// 	content: '123';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+			
+		// }
+		&.active {
+			.st2 {
+				fill: #553C27;
+			}
+		}
+	}
+	&__popover {
+		padding: rem(8) rem(16);
+		background-color: #fff;
+		a {
+			font-size: rem(13);
+			color: #DB9984;
+			padding-right: rem(16);
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(16);
+				height: rem(16);
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66699 12L10.667 8L6.66699 4' stroke='%23DB9984' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&__title {
+		font-size: rem(19);
+		line-height: 1.26em;
+		font-weight: 600;
+		margin-bottom: rem(0);
+	}
+	&__text {
+		margin-bottom: rem(10);
+		font-weight: 500;
+		font-size: rem(15);
+		line-height: 1.33em;
+	}
+	&__wrap {
+		position: relative;
+		z-index: 3;
+		margin-top: auto;
+		p {
+			max-width: rem(364);
+			font-weight: 500;
+			font-size: rem(15);
+			line-height: 1.33em;
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(27)};
+		--bs-btn-padding-y: #{rem(6.5)};
+		--bs-btn-font-size: #{rem(14)};
+	}
+	&__pin {
+		position: absolute;
+		color: #fff;
+		opacity: .5;
+		pointer-events: none;
+		&.active {
+			opacity: 1;
+		}
+		.icon {
+			font-size: rem(32);
+		}
+		&:nth-child(1) {
+			left: 13.5%;
+			top: 27.7%;	
+		}
+		&:nth-child(2) {
+			left: 17.5%;
+    	top: 27.3%;
+		}
+		&:nth-child(3) {
+			left: 10.1%;
+			top: 31%;
+		}
+		&:nth-child(4) {
+			left: 12.5%;
+			top: 31.3%;
+		}
+		&:nth-child(5) {
+			left: 9.6%;
+    	top: 37%;
+		}
+		&:nth-child(6) {
+			left: 13.1%;
+    	top: 36.6%;
+		}
+		&:nth-child(7) {
+			left: 15.8%;
+    	top: 38.5%;
+		}
+		&:nth-child(8) {
+			left: 17.9%;
+    	top: 36.8%;
+		}
+		&:nth-child(9) {
+			left: 18.5%;
+    	top: 42.9%;
+		}
+		&:nth-child(10) {
+			left: 16.1%;
+			top: 43.3%;
+		}
+		&:nth-child(11) {
+			left: 14.7%;
+   		top: 44.6%;
+		}
+		&:nth-child(12) {
+			left: 12.7%;
+			top: 41.2%;
+		}
+		&:nth-child(13) {
+			left: 9.7%;
+			top: 41%;
+		}
+		&:nth-child(14) {
+			left: 7.7%;
+			top: 40.7%;
+		}
+		&:nth-child(15) {
+			left: 7.4%;
+    	top: 45.9%;
+		}
+		&:nth-child(16) {
+			left: 9.1%;
+    	top: 45.1%;
+		}
+		&:nth-child(17) {
+			left: 10.7%;
+			top: 44.6%;
+		}
+		&:nth-child(18) {
+			left: 13.1%;
+			top: 47.7%;
+		}
+		&:nth-child(19) {
+			left: 16.5%;
+    	top: 47.5%;
+		}
+		&:nth-child(20) {
+			left: 21.2%;
+    	top: 49%;
+		}
+		&:nth-child(21) {
+			left: 19%;
+			top: 50.3%;
+		}
+		&:nth-child(22) {
+			left: 17.4%;
+			top: 51.3%;
+		}
+		&:nth-child(23) {
+			left: 14.7%;
+			top: 50.8%;
+		}
+		&:nth-child(24) {
+			left: 14.1%;
+			top: 54%;
+		}
+		&:nth-child(25) {
+			left: 11.5%;
+    	top: 51.7%;
+		}
+		&:nth-child(26) {
+			left: 10.3%;
+    	top: 48.7%;
+		}
+		&:nth-child(27) {
+			left: 7.6%;
+    	top: 50.3%;
+		}
+		&:nth-child(28) {
+			left: 9.1%;
+    	top: 53.2%;
+		}
+		&:nth-child(29) {
+			left: 19.3%;
+			top: 55.3%;
+		}
+		&:nth-child(30) {
+			left: 16.3%;
+			top: 55.3%;
+		}
+		&:nth-child(31) {
+			left: 17.1%;
+    	top: 60%;
+		}
+		&:nth-child(32) {
+			left: 13.7%;
+    	top: 59%;
+		}
+		&:nth-child(33) {
+			left: 10.3%;
+    	top: 59.5%;
+		}
+		&:nth-child(34) {
+			left: 6.2%;
+			top: 60.9%;
+		}
+		&:nth-child(35) {
+			left: 3.1%;
+			top: 62.8%;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMap

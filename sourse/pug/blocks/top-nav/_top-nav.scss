@@ -1,0 +1,149 @@
+.top-nav {
+	// --sPT: #{rem()};
+	// --sPB: #{rem(18)};
+	// --sTPB: #{rem()};
+	&__container {
+		@include media-breakpoint-up(lg) {
+			--c-g: #{rem(24)};
+		}
+	}
+	.top-btns-wrap {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: rem(6) 0;
+		background-color: #fff;
+		z-index: 1000;
+		.top-btns {
+			// @include roww('21px');
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			&__btn {
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+				align-items: center;
+				width: calc(100% / 5);
+				font-size: rem(10);
+				font-weight: 600;
+				line-height: 1.60em;
+				.icon {
+					flex: 0 0 auto;
+					font-size: rem(24);
+					margin-bottom: rem(4);
+					&-whatsapp {
+						color: $primary;
+					}
+				}
+				&.on {
+					.toggle-menu-mobile { 
+						--rotate: 45deg;
+						--position: 0; 
+
+						color: $primary;
+						span {
+							--color: transparent;
+						}
+						span:after,
+						span:before {
+							--color: #{$primary};
+						}
+					}
+				}
+				&:hover {
+					color: $primary;
+				}
+				&--js {
+					.icon {
+						display: inline-block;
+					}
+				}
+				&.active {
+					.icon {
+						display: none;
+					}
+					.top-btns__cross {
+						display: block;
+					}
+				}
+			}
+			&__cross {
+				width: rem(24);
+				height: rem(24);
+				position: relative;
+				display: block;
+				margin-bottom: rem(4);
+				display: none;
+				&::before, &::after {
+					content: '';
+					position: absolute;
+					display: block;
+					@include a-cent();
+					width: rem(14);
+					height: rem(2);
+					background-color: #DB9984;
+				}
+				&::before {
+					transform: rotate(-45deg);
+				}
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	&__btn {
+		--bs-btn-border-radius: 0;
+		--bs-btn-padding-y: #{rem(7)};
+		position: fixed;
+		width: 100%;
+		bottom: rem(56);
+		left: 0;
+		z-index: 10;
+	}
+	&__inner-btn {
+		--bs-btn-padding-y: #{rem(7)};
+
+		margin-top: auto;
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(100% - rem(32));
+
+	}
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	// 
+	@include media-breakpoint-between(md, xl) {}
+
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+
+

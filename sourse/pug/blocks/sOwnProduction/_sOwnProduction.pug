@@ -1,0 +1,21 @@
+mixin sOwnProduction(data)
+	// start sOwnProduction
+	+b.sOwnProduction.section#sOwnProduction.d-none.d-md-block&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md-6
+					+e.img-wrap
+						.img-wrap-center
+							video(autoplay, loop, muted, playsinline, preload="metadata", uk-video)
+								source(src="video/headerBlock-video.mp4", type="video/mp4")
+							//- +img('img/sOwnProduction-bg-1.jpg', 'bg')
+				+e.col.col-md-6
+					+e.wrap
+						.h4 
+							+img('img/svg/sOwnProduction-svg-1.svg')
+							| Собственное производство
+						p Работаем по&nbsp;индивидуальным заказам, разработка 3D&nbsp;&mdash; модели, предоставление консультации архитектора и&nbsp;конструктора, в&nbsp;нашем каталоге 300 + наименований продукции
+						+e.btn.btn.btn-primary(href='#')
+							| О производстве
+							+icon('chevron-right')
+	// end sOwnProduction

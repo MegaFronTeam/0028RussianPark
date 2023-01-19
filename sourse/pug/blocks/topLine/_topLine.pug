@@ -1,0 +1,23 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section.d-none.d-lg-block#topLine&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				mixin link(icon, txt, hrefTxt='#')
+					+e.link(href=hrefTxt)
+						+e.icon-wrap
+							+icon(icon)
+						span!= txt
+				.col-auto
+					+link('tel', '+7 (995) 908-78-78', 'tel:+79959087878')
+				.col-auto
+					+link('mail', 'rbesedka@gmail.com', 'mailto:rbesedka@gmail.com')
+				.col-auto
+					+link('whatsapp', 'WhatsApp')
+				.col-auto
+					+link('telegram', 'Telegram')
+				.col-auto.ms-lg-auto
+					+e.btn--light.btn(href="#") Заказать презентацию
+				.col-auto
+					+e.btn.btn.btn-primary(href="#") Оставить заявку
+	// end topLine

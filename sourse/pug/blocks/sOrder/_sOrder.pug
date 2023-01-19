@@ -1,0 +1,13 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder.d-none.d-md-block&attributes(attributes)
+		.container
+			+e.wrap
+				h4 Закажите индивидуальный проект
+				p Мы&nbsp;не&nbsp;ограничиваемся типовыми решениями. Команда опытных дизайнеров и&nbsp;конструкторов поможет разработать индивидуальный дизайн-проект с&nbsp;учетом ваших пожеланий.
+				+e.btn.btn.btn-light(href='#') 
+					| Заказать
+					+icon('chevron-right')
+				+img('img/sOrder-img-1.jpg').img-1
+				+img('img/sOrder-img-2.jpg').img-2
+	// end sOrder

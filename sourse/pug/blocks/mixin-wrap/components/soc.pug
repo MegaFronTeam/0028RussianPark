@@ -1,0 +1,16 @@
+mixin item-sos(icon, a='#', iconColor)
+	+e.A.item(href= a, target="_blank", style=`--iconColor: ${iconColor}`)
+		if block
+			block
+		else
+			+icon(icon)
+//- social buttons
+mixin soc()
+	+b.soc
+		if block
+			block
+		else
+			each soc in social
+				+item-sos(soc.name, '#', soc.iconColor)
+
+//- /social buttons 

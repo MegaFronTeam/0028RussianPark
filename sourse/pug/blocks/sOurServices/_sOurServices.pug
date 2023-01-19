@@ -1,0 +1,22 @@
+mixin sOurServices(data)
+	// start sOurServices
+	+b.SECTION.sOurServices.section#sOurServices&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наши услуги
+			+e.swiper--js.swiper
+				.swiper-wrapper
+					mixin slide(i, t)
+						+e.slide.swiper-slide
+							+e.wrap
+								+img(`img/svg/sOurServices-icon-${i}.svg`)
+								p!= t
+					+slide(1, 'Проектирование')
+					+slide(2, 'Фундаментные работы')
+					+slide(3, 'Производство изделий и конструкций из дерева')
+					+slide(4, 'Устройство оснований')
+					+slide(5, 'Строительство')
+					+slide(6, 'Генеральный подряд')
+				+e.arrow-wrap.d-md-none
+					+arrow
+	// end sOurServices

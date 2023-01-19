@@ -1,0 +1,26 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews.d-none.d-md-block&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 Новости
+					.col-auto
+						+e.arrow-wrap
+							+arrow()
+			+e.swiper--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+card('sNews-img-1.jpg', 'Строительство &laquo;под ключ&raquo; открытого летнего кафе-веранды в&nbsp;г. Москва, ЦАО, ул. Балчуг, д.1.', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.slide.swiper-slide
+						+card('sNews-img-2.jpg', 'Поставка сцены, ярмарочных домиков, пергол и&nbsp;МАФов в&nbsp;г.Тутаев', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.slide.swiper-slide
+						+card('sNews-img-3.jpg', 'Благоустройство центрального парка&nbsp;им. П.&nbsp;П.&nbsp;Белоусова', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.slide.swiper-slide
+						+card('sNews-img-1.jpg', 'Строительство &laquo;под ключ&raquo; открытого летнего кафе-веранды в&nbsp;г. Москва, ЦАО, ул. Балчуг, д.1.', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.slide.swiper-slide
+						+card('sNews-img-2.jpg', 'Поставка сцены, ярмарочных домиков, пергол и&nbsp;МАФов в&nbsp;г.Тутаев', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.slide.swiper-slide
+						+card('sNews-img-3.jpg', 'Благоустройство центрального парка&nbsp;им. П.&nbsp;П.&nbsp;Белоусова', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+	// end sNews

@@ -1,0 +1,28 @@
+mixin sCatalogBlock(data)
+	// start sCatalogBlock
+	+b.SECTION.sCatalogBlock.section#sCatalogBlock&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Каталог
+			+e.grid-container
+				mixin item(img, text, i)
+					+e.item(href='#')
+						+e.text-wrap
+							+img(`img/svg/catalog-${i}.svg`)
+							!= text
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/${img}`)
+				+item('sCatalogBlock-img-1.png', 'Входные группы и арки', '1')
+				+item('sCatalogBlock-img-2.png', 'Перголы для парка', '2')
+				+item('sCatalogBlock-img-3.png', 'Беседки для парка', '3')
+				+item('sCatalogBlock-img-4.png', 'Сцены для парков', '4')
+				+item('sCatalogBlock-img-5.png', 'Пункты проката', '5')
+				+item('sCatalogBlock-img-6.png', 'Навесы для парка', '6')
+				+item('sCatalogBlock-img-7.png', 'Качели для парка', '7')
+				+item('sCatalogBlock-img-8.png', 'Деревянные горки', '8')
+				+item('sCatalogBlock-img-9.png', 'Павильоны и киоски', '9')
+				+item('sCatalogBlock-img-10.png', 'Кафе и рестораны', '10')
+				+item('sCatalogBlock-img-11.png', 'Ярмарочные домики', '11')
+				+item('sCatalogBlock-img-12.png', 'Административные и офисные здания', '12')
+	// end sCatalogBlock

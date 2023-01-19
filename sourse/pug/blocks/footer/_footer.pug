@@ -1,0 +1,46 @@
+mixin footer()
+	+b.FOOTER.footer.section
+		.container
+			mixin content(title, soc)
+				+e.content
+					h6!= title
+					block
+					if soc
+						+soc
+			+e.row.row
+				.col-lg-4.d-none.d-lg-block
+					+mnu()
+				.col-lg-4
+					+e.inner-row.row
+						.col-12
+							+content('Обратная связь')
+								ul
+									li
+										a(href="#") Написать директору
+									li
+										a(href="#") Задать вопрос
+									li
+										a(href="#") Перезвоните мне
+						.col-12.d-none.d-lg-block
+							+content('Режим работы')
+								ul
+									li Отдео продаж: 9:00— 21:00
+									li Служба доставки: 9:00— 21:00
+				.col-lg-4
+					+content('Контактная информация', true)
+						ul
+							li
+								a(href="tel:+79959087878") +7 995 908-78-78
+							li
+								a(href="mailto:rbesedka@gmail.com") rbesedka@gmail.com
+							li Москва, ул. Рябиновая, 37, стр.1
+		+e.info
+			.container
+				.row
+					.col-lg
+						p &copy;&nbsp;2019&ndash;#[span] &laquo;Русский Парк&raquo;&nbsp;&mdash;<br>Московская область. Все права защищены
+					.col-lg-auto
+						a(href="#") Политика конфиденциальности
+						a(href="#") 
+							+icon('designLogo')
+							| Сделано в Coalla Agency

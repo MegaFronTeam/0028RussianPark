@@ -1,0 +1,63 @@
+// start .sOurEmployees
+.sOurEmployees {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(16)};
+	--sTPB: #{rem(19)};
+	overflow: hidden;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(28)};
+		--sPB: #{rem(36)};
+		--sTPB: #{rem(22)};
+	}
+	.section-title{
+		margin-right: rem(4);
+		.row {
+			align-items: flex-end;
+		}
+		h2 {
+			margin-bottom: 0;
+			line-height: 1.11em;
+		}
+		&__arrow-wrap {
+			display: flex;
+		}
+	}
+	&__slider {
+		overflow: visible;
+		margin-right: rem(-4);
+	}
+	&__slide {
+		width: calc(100% / 2 - rem(4));
+		margin-right: rem(4);
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 3 + rem(54) - rem(4));
+			max-width: calc(rem(330) + rem(54));
+		}
+		p {
+			font-size: rem(13);
+			line-height: 1.23em;
+			margin-bottom: 0;
+		}
+	}
+	&__img-wrap {
+		@include block(330, 316);
+		background-color: $gray-300;
+		margin-bottom: rem(16);
+		.img-wrap-center {
+			align-items: flex-end;
+		}
+	}
+	&__title {
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: 1.14em;
+		margin-bottom: rem(8);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOurEmployees

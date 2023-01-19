@@ -1,0 +1,94 @@
+include ../../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+include components/menu.pug
+include components/icon.pug
+include components/breadcrumb.pug
+include components/pugination.pug
+include components/soc.pug
+include components/pic.pug
+include components/img.pug
+include components/btn.pug
+
+include components/ddgroup.pug
+
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+//- /arrow for swiper-slider
+
+mixin ie11()
+	//- modernizer and for ie11
+	 
+	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin addblock()
+	+b.addBlock
+		+e.btn--minus(type="button")
+		input(type="text" value="1")
+		+e.btn--plus(type="button")
+
+
+
+mixin search()
+	+b.search-block&attributes(attributes)
+		form
+			input(type="text" placeholder="Поиск")
+			button 
+				+icon("search")
+
+mixin page-head(...items)
+	+b.page-head
+		- let l = items.length
+		+e.container.container
+			+breadcrumb('Главная',...items)
+
+mixin bigPageHead(t, img)
+	+b.big-page-head
+		+e.wrap.bg-wrap
+			+img(`img/${img}`, 'bg').picture-bg
+			+e.container.container
+				h1!= t
+
+mixin asideContent()
+	+b.aside
+		+e.head
+			+e.logo.order-lg-last(href="#")
+				+img('img/svg/logo.svg')
+			+e.city(href='#')
+				+e.icon-wrap
+					+icon('pin')
+				p Москва
+				+icon('chevron-down')
+		+e.body
+			+e.title.d-lg-none
+				+e.close--js
+					+icon('chevron-left')
+				.h5 Каталог
+			mixin link(i, text)
+				+e.link(href="#")
+					//- +icon(icon)
+					+img(`img/svg/catalog-${i}.svg`)
+					!= text
+			+link('1', 'Входные группы и арки')
+			+link('2', 'Перголы для парка')
+			+link('3', 'Навесы для парка')
+			+link('4', 'Сцены')
+			+link('5', 'Беседки для парка')
+			+link('6', 'Качели для парка')
+			+link('7', 'Деревянные горки')
+			+link('8', 'Пункты проката')
+			+link('9', 'Павильоны и киоски')
+			+link('10', 'Кафе и рестораны')
+			+link('11', 'Ярмарочные домики')
+			+link('12', 'Административные здания')
+
+mixin card(img, title, text)
+	+b.card-item.bg-wrap(href='#')&attributes(attributes)
+		+e.wrap
+			+img(`img/${img}`, 'bg').picture-bg
+			+e.content
+				+e.title!= title
+				+e.text-wrap
+					p!= text

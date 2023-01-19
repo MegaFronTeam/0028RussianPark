@@ -1,0 +1,139 @@
+mixin sOurPartners(isDefault=true)
+	// start sOurPartners
+	+b.SECTION.sOurPartners.section#sOurPartners(class = (isDefault == true ? "d-none d-md-block" : ""))&attributes(attributes)
+		.container
+			+b.section-title
+				+e.row.row
+					.col
+						h2 Наши проекты
+					.col-auto
+						+e.all-content(href='#')
+							| Все проекты
+							+e.icon-wrap
+								+icon('chevron-right')
+			+e.row.row
+				.col-md-6
+					if isDefault
+						+e.content
+							+e.slider-wrap
+								+e.head
+									.row
+										.col
+											+e.title Клиенты
+										.col-auto
+											+e.arrow-wrap
+												+arrow
+								+e.body
+									+e.swiper--js.swiper
+										.swiper-wrapper
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-md-6
+														+img('img/sOurPartners-img-1.png')
+													.col-md-6
+														+img('img/sOurPartners-img-2.png')
+													.col-md-6
+														+img('img/sOurPartners-img-3.png')
+													.col-md-6
+														+img('img/sOurPartners-img-4.png')
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-md-6
+														+img('img/sOurPartners-img-2.png')
+													.col-md-6
+														+img('img/sOurPartners-img-1.png')
+													.col-md-6
+														+img('img/sOurPartners-img-4.png')
+													.col-md-6
+														+img('img/sOurPartners-img-3.png')
+							+e.slider-wrap
+								+e.head
+									.row
+										.col
+											+e.title Поставщики
+										.col-auto
+											+e.arrow-wrap
+												+arrow
+								+e.body
+									+e.swiper--js.swiper
+										.swiper-wrapper
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-md-6
+														+img('img/sOurPartners-img-5.png')
+													.col-md-6
+														+img('img/sOurPartners-img-6.png')
+													.col-md-6
+														+img('img/sOurPartners-img-7.png')
+													.col-md-6
+														+img('img/sOurPartners-img-8.png')
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-md-6
+														+img('img/sOurPartners-img-6.png')
+													.col-md-6
+														+img('img/sOurPartners-img-5.png')
+													.col-md-6
+														+img('img/sOurPartners-img-8.png')
+													.col-md-6
+														+img('img/sOurPartners-img-7.png')
+					else
+						+e.content
+							+e.slider-wrap
+								+e.head
+									.row
+										.col
+											+e.title Клиенты
+										.col-auto
+											+e.arrow-wrap
+												+arrow
+								+e.body
+									+e.swiper--js.swiper
+										.swiper-wrapper
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-6
+														+img('img/sOurPartners-img-1.png')
+													.col-6
+														+img('img/sOurPartners-img-2.png')
+													.col-6
+														+img('img/sOurPartners-img-3.png')
+													.col-6
+														+img('img/sOurPartners-img-4.png')
+													.col-6
+														+img('img/sOurPartners-img-2.png')
+													.col-6
+														+img('img/sOurPartners-img-1.png')
+													.col-6
+														+img('img/sOurPartners-img-4.png')
+													.col-6
+														+img('img/sOurPartners-img-3.png')
+											+e.slide.swiper-slide
+												+e.swiper-row.row
+													.col-6
+														+img('img/sOurPartners-img-1.png')
+													.col-6
+														+img('img/sOurPartners-img-3.png')
+													.col-6
+														+img('img/sOurPartners-img-2.png')
+													.col-6
+														+img('img/sOurPartners-img-2.png')
+													.col-6
+														+img('img/sOurPartners-img-4.png')
+													.col-6
+														+img('img/sOurPartners-img-4.png')
+													.col-6
+														+img('img/sOurPartners-img-1.png')
+													.col-6
+														+img('img/sOurPartners-img-3.png')
+
+				.col-md-6
+					+e.wrap
+						+img('img/svg/sOurPartners-img-1.svg')
+						h6 Приглашаем к сотрудничеству
+						+form-wrap
+							+input('Введите свое имя', 'text', 'Имя')
+							+input('Введите свой номер телефона', 'tel', 'Телефон')
+							+e.btn.btn.btn-primary(type='submit') Отправить
+							+policy
+	// end sOurPartners

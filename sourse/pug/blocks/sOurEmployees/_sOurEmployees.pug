@@ -1,0 +1,24 @@
+mixin sOurEmployees(data)
+	// start sOurEmployees
+	+b.SECTION.sOurEmployees.section#sOurEmployees&attributes(attributes)
+		.container
+			+e.slider.swiper.defaultSwiper-js
+				+b.section-title
+					.row
+						.col
+							h2 Наши сотрудники
+						.col-auto
+							+e.arrow-wrap
+								+arrow
+				.swiper-wrapper
+					mixin slide(i, title, text)
+						+e.slide.swiper-slide
+							+e.img-wrap
+								.img-wrap-center
+									+img(`img/sOurEmployees-img-${i}.png`)
+							+e.title!= title
+							p!= text
+					+slide(1, 'Клюев Сергей', 'Генеральный директор')
+					+slide(2, 'Зайева Кристина', 'Никифирова Мария')
+					+slide(3, 'Менеджер по продажам', 'Инженер-конструктор')
+	// end sOurEmployees

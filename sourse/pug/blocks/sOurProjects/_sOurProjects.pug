@@ -1,0 +1,28 @@
+mixin sOurProjects(data)
+	// start sOurProjects
+	+b.SECTION.sOurProjects.section#sOurProjects&attributes(attributes)
+		.container
+			+b.section-title
+				+e.row.row
+					.col
+						h2 Наши проекты
+					.col-auto
+						+e.all-content(href='#')
+							| Все проекты
+							+e.icon-wrap
+								+icon('chevron-right')
+			+e.swiper--js.swiper
+				+e.row.row.swiper-wrapper
+					+e.col.col-md-6.swiper-slide
+						+card('project-item-bg-1.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
+					+e.col.col-md-3.swiper-slide
+						+card('project-item-bg-2.jpg', 'Ливны', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.col.col-md-3.swiper-slide
+						+card('project-item-bg-3.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.col.col-md-3.swiper-slide
+						+card('project-item-bg-4.jpg', 'Москва ул. Декабристов', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.col.col-md-3.swiper-slide
+						+card('project-item-bg-5.jpg', 'Темрюк', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+					+e.col.col-md-6.swiper-slide
+						+card('project-item-bg-6.jpg', 'Скитские Пруды', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
+	// end sOurProjects

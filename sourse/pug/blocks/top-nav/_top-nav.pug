@@ -1,0 +1,53 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		+e.container.container
+			.row
+				.col
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner 
+							+search.d-lg-none
+							+mnu()
+							+e.inner-btn.btn.btn-primary.d-lg-none(href='#') Заказать презентацию
+				.col-auto.d-none.d-lg-block
+					+search
+				.col-auto.order-lg-last.d-lg-none
+					+e.btn.btn.btn-primary(href="#") Оставить заявку
+					+b.top-btns-wrap
+						.container
+							+b.top-btns
+								mixin link(icon, txt)
+									+e.btn(href='#')
+										+icon(icon)
+										!= txt
+								+e.btn--js(href='#')
+									+icon('catalog')
+									+e.cross
+									| Каталог
+								+link('mail', 'Написать')
+								+link('whatsapp', 'WhatsApp')
+								+link('tel', 'Позвонить')
+								.top-btns__btn.toggle-menu-mobile--js
+									+b.toggle-menu-mobile
+										span
+									| Меню
+	// end top-nav

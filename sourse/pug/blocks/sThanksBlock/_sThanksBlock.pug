@@ -1,0 +1,24 @@
+mixin sThanksBlock(data)
+	// start sThanksBlock
+	+b.SECTION.sThanksBlock.section#sThanksBlock&attributes(attributes)
+		.container
+			+e.slider.swiper.defaultSwiper-js
+				+b.section-title
+					.row
+						.col
+							h2 Благодарности
+						.col-auto.d-none.d-md-block
+							+e.arrow-wrap
+								+arrow
+				.swiper-wrapper
+					mixin slide(i)
+						+e.slide.swiper-slide
+							+e.img-wrap(href=`img/sThanksBlock-img-lg-${i}.png` data-fancybox="gallery")
+								.img-wrap-center
+									+img(`img/sThanksBlock-img-${i}.png`)
+					- for(let i = 1; i <=6; i++)
+						+slide(i)
+					+slide(5)
+					+slide(5)
+					+slide(5)
+	// end sThanksBlock

@@ -1,0 +1,42 @@
+{
+	"nav":[
+		
+		{ "name":"Портфолио", "url":"#"},
+		{	"name":"О нас", "url":"#"},
+		{"name":"Новости", "url":"#"},
+		{"name":"Контакты", "url":"#"}
+	],
+	"social":[
+		{
+			"name": "vk2",
+			"iconColor": "#4680C2"
+		},
+		{
+			"name": "whatsapp",
+			"iconColor": "#2DB10F"
+		},
+		{
+			"name": "telegram",
+			"iconColor": "#229ED9"
+		}
+	],
+	"index":{
+		"head": {
+			"title": "тест dffsdf dfsdтест 2222"
+		}
+	},
+	"items": [
+			{
+			"title": "заловок",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 22",
+			"text": "текст"
+		},
+			{
+			"title": "заловок 33",
+			"text": "текст"
+			}
+		]
+	}

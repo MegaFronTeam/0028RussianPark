@@ -1,0 +1,121 @@
+// start .sCatalogBlock
+.sCatalogBlock {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(32)};
+	--sTPB: #{rem(15)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(25)};
+		--sPB: #{rem(45)};
+		--sTPB: #{rem(24)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__grid-container {
+		display: grid;
+		column-gap: rem(16);
+  	row-gap: rem(16);
+		grid-template-columns: repeat(4, 1fr);
+		@include media-breakpoint-up(md) {
+			grid-template-rows: repeat(7, 2fr);
+		}
+	}
+	&__item {
+		display: flex;
+    flex-direction: column-reverse;
+		padding: rem(8);
+		background-color: rgba($color: $gray-100, $alpha: .5);
+		grid-column: 1/5;
+		@include media-breakpoint-up(md) {
+			flex-direction: column;
+		}
+		&:hover {
+			background-color: #fff;
+			box-shadow: 0px 0px 14px 2px #a4a4a485;
+		}
+		@media (min-width: 380px) {
+			&:nth-child(odd) {
+				grid-column: 1/3;
+			}
+			&:nth-child(even) {
+				grid-column: 3/5;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			&:nth-child(1) {
+				grid-row: 1/3;
+			}
+			&:nth-child(2) {
+				grid-row: 1/3;
+			}
+			&:nth-child(3) {
+				grid-row: 3/5;
+			}
+			&:nth-child(4) {
+				grid-row: 3/5;
+			}
+			&:nth-child(5) {
+				grid-row: 5/7;
+			}
+			&:nth-child(6) {
+				grid-column: 3/4;
+			}
+			&:nth-child(7) {
+				grid-column: 4/5;
+			}
+			&:nth-child(8) {
+				grid-column: 3/4;
+				grid-row: 6/7;
+			}
+			&:nth-child(9) {
+				grid-column: 4/5;
+				grid-row: 6/7;
+			}
+			&:nth-child(10) {
+				grid-column: 1/2;
+			}
+			&:nth-child(11) {
+				grid-column: 2/3;
+			}
+			&:nth-child(12) {
+				grid-column: 3/4;
+			}
+		}
+	}
+	&__text-wrap {
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		font-weight: 600;
+		margin-bottom: auto;
+		line-height: 1.14em;
+		img {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: rem(24);
+			margin-right: rem(8);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: rem(11);
+			img {
+				max-width: rem(20);
+				margin-right: rem(5);
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(440, 224);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogBlock
