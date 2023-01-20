@@ -85,7 +85,10 @@
 		// 	left: 0;
 			
 		// }
-		&.active {
+		.st2 {
+			@include mt;
+		}
+		&.active, &:hover {
 			.st2 {
 				fill: #553C27;
 			}
@@ -145,6 +148,7 @@
 		--bs-btn-font-size: #{rem(14)};
 	}
 	&__pin {
+		@include mt;
 		position: absolute;
 		color: #fff;
 		opacity: .5;

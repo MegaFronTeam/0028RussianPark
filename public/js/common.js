@@ -439,9 +439,6 @@ function eventHandler() {
 			catalogContainer.classList.toggle('active');
 			catalogBackBtn.classList.remove('active');
 			$('body').toggleClass('fixed2');
-			if (toggleMenuItemJs.classList.contains('on')) {
-				console.log(1);
-			}
 		});
 	}
 	if(menuItemJs) {
@@ -460,6 +457,15 @@ function eventHandler() {
 		catalogBackBtn.addEventListener('click', function() {
 			catalogContainer.classList.remove('active2');
 		});
+		document.addEventListener('click', function(e) {
+			let targetBtn = e.target.closest('.top-btns__btn--js'); 
+			let targetCatalogActive = e.target.closest('.aside__body.active'); 
+			if(!targetBtn && !targetCatalogActive) {
+				catalogContainer.classList.remove('active');
+				catalogBtn.classList.remove('active');
+				$('body').removeClass('fixed2');
+			}
+		})
 	};
 
 	let sOurPartnersSwiperWraps = document.querySelectorAll('.sOurPartners__slider-wrap');
