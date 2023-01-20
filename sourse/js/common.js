@@ -606,6 +606,26 @@ function eventHandler() {
 	};
 
 	AOS.init();
+
+	var sProdCardThumbSwiper = new Swiper(".sProdCard__thumb-slider--js", {
+		// spaceBetween: 10,
+		slidesPerView: 'auto',
+		watchSlidesProgress: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+	var sProdCardSwiper = new Swiper(".sProdCard__slider--js", {
+		// spaceBetween: 10,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: sProdCardThumbSwiper,
+		},
+	});
 };
 // sOurPartnersSwiperWrap.map(sOurPartnersSwiperItem => {sOurPartnersSwiperItem.querySelector('.swiper-button-next')})
 if (document.readyState !== 'loading') {

@@ -1,0 +1,59 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				.col-md-6
+					+e.slider-wrap
+						+e.slider--js.swiper
+							.swiper-wrapper
+								-for(let i = 1; i <= 10; i++)
+									+e.slide.swiper-slide
+										+e.img-wrap(href='img/sProdCard-img-1.png' data-fancybox="gallery")
+											.img-wrap-center
+												+img('img/sProdCard-img-1.png', 'bg')
+							+arrow
+						+e.thumb-slider--js.swiper
+							.swiper-wrapper
+								mixin thumbSlide(i)
+									+e.thumb-slide.swiper-slide 
+										+e.img-wrap
+											.img-wrap-center
+												+img(`img/sProdCard-img-${i}.png`, 'bg')
+								-for(let i = 1; i <= 8; i++)
+									+thumbSlide(i)
+								+thumbSlide(1)
+								+thumbSlide(1)
+							+arrow
+				.col-md-6
+					+e.wrap
+						+e.content
+							+e.head
+								+e.articul Артикул: np089
+								h4 Парковые качели «Пагода_2»
+								p Размер 1067×2325 мм
+							+e.body
+								+e.inner-row.row
+									.col-12
+										h3 102 990 ₽
+									.col-12
+										h5 Цена по запросу
+									.col-12
+										+e.btn.btn.btn-primary(href='#') Оставить заявку
+									.col-12
+										+e.btn.btn.btn-light(href='#') Заказать индивидуальный проект
+						+e.caption
+							+e.caption-row.row
+								.col-auto
+									+e.link(href="#")
+										+icon('cube')
+										| Скачать 3D модель
+								.col-auto
+									+e.link(href="#")
+										+icon('plan')
+										| Скачать план
+								.col-auto
+									+e.link(href="#")
+										+icon('facade')
+										| Скачать фасады
+	// end sProdCard

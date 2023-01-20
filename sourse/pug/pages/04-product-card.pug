@@ -6,6 +6,7 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sProdCardInfo/_sProdCardInfo.pug
 include ../blocks/sSimilarProducts/_sSimilarProducts.pug
 
@@ -28,6 +29,7 @@ block pagecontent
 			+top-nav()
 		main
 			+page-head('Качели для парка', 'Парковые качели «Пагода_2»')
+			+sProdCard
 			+sProdCardInfo()
 			+sSimilarProducts
 		+footer() 

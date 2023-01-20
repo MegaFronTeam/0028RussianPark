@@ -627,3 +627,12 @@ iframe {
 .popover {
 	border: none;
 }
+
+.btn-light {
+	--bs-btn-hover-border-color: #fff;
+	--bs-btn-hover-color: #{$primary};
+	--bs-btn-hover-bg: #fff;
+	--bs-btn-active-border-color: #fff;
+	--bs-btn-active-color: #{$primary};
+	--bs-btn-active-bg: #fff;
+}
