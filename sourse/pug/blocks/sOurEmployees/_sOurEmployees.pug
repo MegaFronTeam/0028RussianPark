@@ -3,7 +3,7 @@ mixin sOurEmployees(data)
 	+b.SECTION.sOurEmployees.section#sOurEmployees&attributes(attributes)
 		.container
 			+e.slider.swiper.defaultSwiper-js
-				+b.section-title
+				+b.section-title(data-aos="fade-up" data-aos-delay="0")
 					.row
 						.col
 							h2 Наши сотрудники
@@ -12,7 +12,7 @@ mixin sOurEmployees(data)
 								+arrow
 				.swiper-wrapper
 					mixin slide(i, title, text)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay=`50 * ${i}`)
 							+e.img-wrap
 								.img-wrap-center
 									+img(`img/sOurEmployees-img-${i}.png`)

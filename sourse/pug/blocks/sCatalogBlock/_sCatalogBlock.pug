@@ -6,7 +6,7 @@ mixin sCatalogBlock(data)
 				h2 Каталог
 			+e.grid-container
 				mixin item(img, text, i)
-					+e.item(href='#')
+					+e.item(href='#' data-aos="fade-up" data-aos-delay=`50 * ${i}`)
 						+e.text-wrap
 							+img(`img/svg/catalog-${i}.svg`)
 							!= text

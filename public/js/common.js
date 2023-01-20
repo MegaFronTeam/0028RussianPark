@@ -594,6 +594,18 @@ function eventHandler() {
 			delay: { "show": 100, "hide": 100 },
 		})
 	};
+
+	let showMoreText = document.querySelector('.toggle-text-js');
+	if(showMoreText) {
+		showMoreText.querySelector('a').addEventListener('click', function(e) {
+			// let showMoreText = document.querySelector('.showMoreText-js');
+			e.preventDefault();
+			$('.showMoreText-js').toggle();
+			$(showMoreText).toggleClass('active');
+		})
+	};
+
+	AOS.init();
 };
 // sOurPartnersSwiperWrap.map(sOurPartnersSwiperItem => {sOurPartnersSwiperItem.querySelector('.swiper-button-next')})
 if (document.readyState !== 'loading') {

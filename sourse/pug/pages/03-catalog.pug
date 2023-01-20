@@ -6,20 +6,14 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/footer/_footer.pug
 
-include ../blocks/sAbout/_sAbout.pug
-include ../blocks/sOurProjects/_sOurProjects.pug
-include ../blocks/sOurPartners/_sOurPartners.pug
-include ../blocks/sOurServices/_sOurServices.pug
-include ../blocks/sOurEmployees/_sOurEmployees.pug
-include ../blocks/sThanksBlock/_sThanksBlock.pug
-include ../blocks/sMap/_sMap.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= 'about-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'О нас'
+	- let  title= 'Качели для парка'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -32,32 +26,7 @@ block pagecontent
 			+topLine
 			+top-nav()
 		main
-			+bigPageHead('О нас', 'page-head-bg.jpg')
-			+sAbout
-			+sContent
-				.container
-					+b.media-content.swiper.defaultSwiper-js
-						.swiper-wrapper
-							+e.slide.swiper-slide
-								+e.img-wrap
-									.img-wrap-center
-										+img('img/sContent-img-1.jpg', 'bg')
-							+e.slide.swiper-slide
-								+e.img-wrap
-									.img-wrap-center
-										+img('img/sContent-img-1.jpg', 'bg')
-						.row
-							.col.d-none.d-md-block
-								p Описание изображения
-							.col-auto
-								+e.arrow-wrap
-									+arrow()
-			+sOurServices
-			+sMap
-			+sOurProjects
-			+sOurPartners(false)
-			+sOurEmployees
-			+sThanksBlock
+			+sCatalog
 		+footer()
       
 

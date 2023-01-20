@@ -71,15 +71,15 @@
 			--bs-btn-color: #{$secondary};
 			--bs-btn-bg: #ECE8E5;
 			--bs-btn-border-color: #ECE8E5;
-			--bs-btn-hover-color: #{$secondary};
-			--bs-btn-hover-bg: rgba($color: #ECE8E5, $alpha: .9);
-			--bs-btn-hover-border-color: rgba($color: #ECE8E5, $alpha: .9);
-			--bs-btn-active-color: #{$secondary};
-			--bs-btn-active-bg: rgba($color: #ECE8E5, $alpha: .9);
-			--bs-btn-active-border-color: rgba($color: #ECE8E5, $alpha: .9);
-			--bs-btn-disabled-color: #{$secondary};
-			--bs-btn-disabled-bg: rgba($color: #ECE8E5, $alpha: .9);
-			--bs-btn-disabled-border-color: rgba($color: #ECE8E5, $alpha: .9);
+			--bs-btn-hover-color: #{$orange};
+			--bs-btn-hover-bg: #ECE8E5;
+			--bs-btn-hover-border-color: #ECE8E5;
+			--bs-btn-active-color: #{$orange};
+			--bs-btn-active-bg: #ECE8E5;
+			--bs-btn-active-border-color: #ECE8E5;
+			--bs-btn-disabled-color: #{$orange};
+			--bs-btn-disabled-bg: #ECE8E5;
+			--bs-btn-disabled-border-color: #ECE8E5;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

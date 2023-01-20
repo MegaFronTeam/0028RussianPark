@@ -31,6 +31,13 @@
     --bs-btn-padding-x: #{rem(16)};
     --bs-btn-padding-y: #{rem(6)};
 		--bs-btn-font-size: #{rem(14)};
+
+		--bs-btn-hover-bg: #fff;
+		--bs-btn-active-bg: #fff;
+		--bs-btn-hover-border-color: #fff;
+		--bs-btn-active-border-color: #fff;
+		--bs-btn-hover-color: #{$orange};
+		--bs-btn-active-color: #{$orange};
 		@include media-breakpoint-up(xl) {
 			--bs-btn-font-size: #{rem(14)};
 		}

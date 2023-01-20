@@ -1,41 +1,27 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+		+b.section-title(data-aos="fade-up" data-aos-delay="0")
+			.container
+				h1.h4 Качели для парка
+				.toggle-text-js
+					p В&nbsp;компании &laquo;Русский парк&raquo; вы&nbsp;можете заказать качели для загородного дома и&nbsp;для парка из
+					+e.show-more.showMoreText-js любых материалов, а&nbsp;так&nbsp;же сотни других товаров для благоустройства своего участка. Благодаря собственному производству качелей из&nbsp;дерева мы&nbsp;можем предоставить товары и&nbsp;услуги отличного качества по&nbsp;рыночным ценам.
+					+e.show-more-btn(href='#') 
+						span.show Раскрыть
+						span.hide Скрыть
+						+icon('chevron-down')
+		+e.container.container
+			+e.wrap(data-aos="fade-up" data-aos-delay="0")
+				+e.row.row
+					-for(let i = 0; i < 7; i++)
+						.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+							+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+						.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+							+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+						.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+							+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+						.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+							+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+			+pugin()(data-aos="fade-up" data-aos-delay="0")
 	// end sCatalog

@@ -29,6 +29,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -233,7 +234,7 @@
 					<div class="headerBlock section bg-wrap" id="headerBlock">
 						<div class="headerBlock__wrap-center">
 							<video class="picture-bg" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" uk-video="uk-video">
-								<source src="video/headerBlock-video.mp4" type="video/mp4"/>
+								<source src="video/headerBlock-video.MP4" type="video/mp4"/>
 							</video>
 							<div class="container">
 								<div class="section-title">
@@ -252,20 +253,22 @@
 					<!-- start sAdvantages-->
 					<div class="sAdvantages section d-none d-md-block" id="sAdvantages">
 						<div class="container">
-							<div class="sAdvantages__row row">
-								<div class="sAdvantages__col col-md-4">
-									<div class="sAdvantages__item"><img src="img/svg/sAdvantages-1.svg" alt="" loading="lazy"/>
-										<p>Изготовляем по индивидуальным проектам</p>
+							<div class="sAdvantages__wrap">
+								<div class="sAdvantages__row row">
+									<div class="sAdvantages__col col-md-4">
+										<div class="sAdvantages__item"><img src="img/svg/sAdvantages-1.svg" alt="" loading="lazy"/>
+											<p>Изготовляем по индивидуальным проектам</p>
+										</div>
 									</div>
-								</div>
-								<div class="sAdvantages__col col-md-4">
-									<div class="sAdvantages__item"><img src="img/svg/sAdvantages-2.svg" alt="" loading="lazy"/>
-										<p>Собственное производство</p>
+									<div class="sAdvantages__col col-md-4">
+										<div class="sAdvantages__item"><img src="img/svg/sAdvantages-2.svg" alt="" loading="lazy"/>
+											<p>Собственное производство</p>
+										</div>
 									</div>
-								</div>
-								<div class="sAdvantages__col col-md-4">
-									<div class="sAdvantages__item"><img src="img/svg/sAdvantages-3.svg" alt="" loading="lazy"/>
-										<p>Работаем «Под ключ»</p>
+									<div class="sAdvantages__col col-md-4">
+										<div class="sAdvantages__item"><img src="img/svg/sAdvantages-3.svg" alt="" loading="lazy"/>
+											<p>Работаем «Под ключ»</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -275,7 +278,7 @@
 					<!-- start sOurProjects-->
 					<section class="sOurProjects section" id="sOurProjects">
 						<div class="container">
-							<div class="section-title">
+							<div class="section-title" data-aos="fade-up" data-aos-delay="0">
 								<div class="section-title__row row">
 									<div class="col">
 										<h2>Наши проекты</h2>
@@ -293,7 +296,7 @@
 							</div>
 							<div class="sOurProjects__swiper sOurProjects__swiper--js swiper">
 								<div class="sOurProjects__row row swiper-wrapper">
-									<div class="sOurProjects__col col-md-6 swiper-slide">
+									<div class="sOurProjects__col col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="0">
 										<a class="card-item bg-wrap card-item card-item--horizontal" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-1.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -306,7 +309,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sOurProjects__col col-md-3 swiper-slide">
+									<div class="sOurProjects__col col-md-3 swiper-slide" data-aos="fade-up" data-aos-delay="50">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-2.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -319,7 +322,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sOurProjects__col col-md-3 swiper-slide">
+									<div class="sOurProjects__col col-md-3 swiper-slide" data-aos="fade-up" data-aos-delay="100">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-3.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -332,7 +335,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sOurProjects__col col-md-3 swiper-slide">
+									<div class="sOurProjects__col col-md-3 swiper-slide" data-aos="fade-up" data-aos-delay="150">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-4.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -345,7 +348,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sOurProjects__col col-md-3 swiper-slide">
+									<div class="sOurProjects__col col-md-3 swiper-slide" data-aos="fade-up" data-aos-delay="200">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-5.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -358,7 +361,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sOurProjects__col col-md-6 swiper-slide">
+									<div class="sOurProjects__col col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="250">
 										<a class="card-item bg-wrap card-item card-item--horizontal" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/project-item-bg-6.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -380,16 +383,16 @@
 					<div class="sOwnProduction section d-none d-md-block" id="sOwnProduction">
 						<div class="container">
 							<div class="sOwnProduction__row row">
-								<div class="col-md-6">
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
 									<div class="sOwnProduction__img-wrap">
 										<div class="img-wrap-center">
 											<video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" uk-video="uk-video">
-												<source src="video/headerBlock-video.mp4" type="video/mp4"/>
+												<source src="video/headerBlock-video.MP4" type="video/mp4"/>
 											</video>
 										</div>
 									</div>
 								</div>
-								<div class="sOwnProduction__col col-md-6">
+								<div class="sOwnProduction__col col-md-6" data-aos="fade-up" data-aos-delay="0">
 									<div class="sOwnProduction__wrap">
 										<div class="h4"> <img src="img/svg/sOwnProduction-svg-1.svg" alt="" loading="lazy"/>Собственное производство
 										</div>
@@ -412,7 +415,7 @@
 								<h2>Каталог</h2>
 							</div>
 							<div class="sCatalogBlock__grid-container">
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 1">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-1.svg" alt="" loading="lazy"/>Входные группы и арки
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -420,7 +423,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 2">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-2.svg" alt="" loading="lazy"/>Перголы для парка
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -428,7 +431,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 3">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-3.svg" alt="" loading="lazy"/>Беседки для парка
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -436,7 +439,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 4">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-4.svg" alt="" loading="lazy"/>Сцены для парков
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -444,7 +447,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 5">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-5.svg" alt="" loading="lazy"/>Пункты проката
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -452,7 +455,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 6">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-6.svg" alt="" loading="lazy"/>Навесы для парка
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -460,7 +463,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 7">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-7.svg" alt="" loading="lazy"/>Качели для парка
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -468,7 +471,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 8">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-8.svg" alt="" loading="lazy"/>Деревянные горки
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -476,7 +479,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 9">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-9.svg" alt="" loading="lazy"/>Павильоны и киоски
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -484,7 +487,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 10">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-10.svg" alt="" loading="lazy"/>Кафе и рестораны
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -492,7 +495,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 11">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-11.svg" alt="" loading="lazy"/>Ярмарочные домики
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -500,7 +503,7 @@
 										</div>
 									</div>
 								</a>
-								<a class="sCatalogBlock__item" href="#">
+								<a class="sCatalogBlock__item" href="#" data-aos="fade-up" data-aos-delay="50 * 12">
 									<div class="sCatalogBlock__text-wrap"><img src="img/svg/catalog-12.svg" alt="" loading="lazy"/>Административные и офисные здания
 									</div>
 									<div class="sCatalogBlock__img-wrap">
@@ -515,7 +518,7 @@
 					<!-- start sOrder-->
 					<section class="sOrder section d-none d-md-block" id="sOrder">
 						<div class="container">
-							<div class="sOrder__wrap">
+							<div class="sOrder__wrap" data-aos="fade-up" data-aos-delay="0">
 								<h4>Закажите индивидуальный проект</h4>
 								<p>Мы&nbsp;не&nbsp;ограничиваемся типовыми решениями. Команда опытных дизайнеров и&nbsp;конструкторов поможет разработать индивидуальный дизайн-проект с&nbsp;учетом ваших пожеланий.</p>
 								<a class="sOrder__btn btn btn-light" href="#">
@@ -523,15 +526,15 @@
 									<svg class="icon icon-chevron-right ">
 										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
 									</svg>
-								</a><img class="img-1" src="img/sOrder-img-1.jpg" alt="" loading="lazy"/><img class="img-2" src="img/sOrder-img-2.jpg" alt="" loading="lazy"/>
+								</a><img class="img-1" src="img/sOrder-img-1.jpg" alt="" loading="lazy" data-aos="fade-up" data-aos-delay="200"/><img class="img-2" src="img/sOrder-img-2.jpg" alt="" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
 							</div>
 						</div>
 					</section>
 					<!-- end sOrder-->
 					<!-- start sMap-->
 					<section class="sMap section" id="sMap">
-						<div class="sMap__container container"><img class="img" src="img/map-bg.png" alt="" loading="lazy"/>
-							<div class="section-title">
+						<div class="sMap__container container" data-aos="fade-up" data-aos-delay="0"><img class="img" src="img/map-bg.png" alt="" loading="lazy"/>
+							<div class="section-title" data-aos="fade-up" data-aos-delay="200">
 								<div class="section-title__row row">
 									<div class="col-md">
 										<h2>Работаем по всей России</h2>
@@ -543,7 +546,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sMap__wrap d-none d-md-block">
+							<div class="sMap__wrap d-none d-md-block" data-aos="fade-up" data-aos-delay="300">
 								<div class="row">
 									<div class="col">
 										<p>Готовы работать со&nbsp;всеми регионами России, оставьте заявку и&nbsp;мы&nbsp;с&nbsp;вами свяжемся</p>
@@ -905,177 +908,177 @@
 										<path class="st5" d="M349.8,323.8L349.8,323.8L349.8,323.8l6.1,0.8l-0.8,2l-6.1,8l-9.1,8.9l-7.8,3.5l-0.2,0.1l-0.3,0.1v0.3v0.2						l-0.2,3.8l0,0v0v0.1v0.1l0.1,0.1l0,0.1l0,0l2.3,4.4l-3.1,3.5l-0.1,0.1l-0.1,0.1v0.2v0.1l-0.5,5l-1.8,2.2l-7.2,0.3h-0.2h-0.4						l-0.1,0.4l-0.1,0.3l0,0l0,0l-1,4.5l-2.2,1.4l-2.8-3.1l0,0l-0.3-0.3l-0.4-0.5l-0.4,0.5l-0.2,0.4l0,0l0,0l-4.1,6.5l-6.5,0.7l-0.1,0						l-0.1,0l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l0,0l0,0l-5.8,6.9l-2.2,0.5l-0.8-1l-0.4-2.6v0V383l0-0.1l-0.5-2l0-0.2l-0.1-0.3l-0.3-0.1						l-0.2-0.1l0,0l0,0l-2.6-0.6l-0.3-3.6v-0.3v-0.5H288h-0.3l-6.5-0.3v-5.1v-0.6l-0.6,0.1l-0.4,0l-2.7,0.1l0.1-6l2.3,0.2l0,0h0h0.2h0.3						l0.1-0.2l0.1-0.1l3.3-3.7l0,0l-0.4-0.4l0.4,0.4l0,0l0.1-0.1l0-0.1l1.9-5.1l3-3.2h0l0.3-0.1v-0.3l3.6-9.3l2.5-2.8h0.1l0.1-0.2						l3.1-4.2l0.3-0.4l-0.4-0.3l-0.2-0.2l-2.6-2.3v-2.8l9.6-4.1l0.2-0.1l0.4-0.1l-0.1-0.4l0-0.2l-0.3-5.7v-0.1v-0.2l-0.1-0.1l-0.1-0.1						l-5.8-7.7l2.3-5.6l8,0.8l6.5,7.3l0,0l0,0l0,0l0,0l0.1,0.1l0.1,0l6.9,3.6v0.2l0.4,0.1l10.7,1.2l0,0h0h0.1h0.1l0.1-0.1l0.1,0l0,0l0,0						l3.6-2l10.6,8.7l0,0l0.1,0l0.1,0l0,0l0,0L349.8,323.8z"></path></a><a class="popover-toggle" id="bd8e6511-e4b9-4841-90de-6bbc231a789e" data-bs-content=" Республика Крым " data-bs-toggle="popover" data-mu="2" data-smu="2" href="#" data-sno="2" role="button" style="--path-opacity: .4" tabindex="0">
 										<path class="st5" d="M22.1,354.8L22,355l0.2,0.2l9,11.9l-3.6,4.2l-6.3-3.7l-9.9-12.5l-0.2-0.2l-0.3,0l-8.5,0.5l-1.2-6.9l4.9-5.3						l0.1-0.2l0-0.2l-0.5-10.8l1.3-2.2l13.1,9l0.3,0.2l0.3-0.2l3.1-2.2l3.4,2.8L22.1,354.8z"></path></a>
 									<div class="sMap__pins">
-										<div class="sMap__pin" data-city="Санкт-Петербург">
+										<div class="sMap__pin" data-city="Санкт-Петербург" data-aos="fade-up" data-aos-delay="0" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Петрозаводск">
+										<div class="sMap__pin" data-city="Петрозаводск" data-aos="fade-up" data-aos-delay="20" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Псков">
+										<div class="sMap__pin" data-city="Псков" data-aos="fade-up" data-aos-delay="40" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Великий Новгород">
+										<div class="sMap__pin" data-city="Великий Новгород" data-aos="fade-up" data-aos-delay="60" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Смоленск">
+										<div class="sMap__pin" data-city="Смоленск" data-aos="fade-up" data-aos-delay="80" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Тверь">
+										<div class="sMap__pin" data-city="Тверь" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Ярославль">
+										<div class="sMap__pin" data-city="Ярославль" data-aos="fade-up" data-aos-delay="120" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Вологда">
+										<div class="sMap__pin" data-city="Вологда" data-aos="fade-up" data-aos-delay="140" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Кострома">
+										<div class="sMap__pin" data-city="Кострома" data-aos="fade-up" data-aos-delay="160" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Иваново">
+										<div class="sMap__pin" data-city="Иваново" data-aos="fade-up" data-aos-delay="180" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Владимир">
+										<div class="sMap__pin" data-city="Владимир" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Москва">
+										<div class="sMap__pin" data-city="Москва" data-aos="fade-up" data-aos-delay="220" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Калуга">
+										<div class="sMap__pin" data-city="Калуга" data-aos="fade-up" data-aos-delay="240" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Брянск">
+										<div class="sMap__pin" data-city="Брянск" data-aos="fade-up" data-aos-delay="260" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Курск">
+										<div class="sMap__pin" data-city="Курск" data-aos="fade-up" data-aos-delay="280" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Орёл">
+										<div class="sMap__pin" data-city="Орёл" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Тула">
+										<div class="sMap__pin" data-city="Тула" data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Рязань">
+										<div class="sMap__pin" data-city="Рязань" data-aos="fade-up" data-aos-delay="340" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Нижний Новгород">
+										<div class="sMap__pin" data-city="Нижний Новгород" data-aos="fade-up" data-aos-delay="360" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Киров">
+										<div class="sMap__pin" data-city="Киров" data-aos="fade-up" data-aos-delay="380" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Йошкар-Ола">
+										<div class="sMap__pin" data-city="Йошкар-Ола" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Чебоксары">
+										<div class="sMap__pin" data-city="Чебоксары" data-aos="fade-up" data-aos-delay="420" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Мордовия">
+										<div class="sMap__pin" data-city="Мордовия" data-aos="fade-up" data-aos-delay="440" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Пенза">
+										<div class="sMap__pin" data-city="Пенза" data-aos="fade-up" data-aos-delay="460" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Тамбов">
+										<div class="sMap__pin" data-city="Тамбов" data-aos="fade-up" data-aos-delay="480" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Липецк">
+										<div class="sMap__pin" data-city="Липецк" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Белгород">
+										<div class="sMap__pin" data-city="Белгород" data-aos="fade-up" data-aos-delay="520" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Воронеж">
+										<div class="sMap__pin" data-city="Воронеж" data-aos="fade-up" data-aos-delay="540" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Казань">
+										<div class="sMap__pin" data-city="Казань" data-aos="fade-up" data-aos-delay="560" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Ульяновск">
+										<div class="sMap__pin" data-city="Ульяновск" data-aos="fade-up" data-aos-delay="580" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Самара">
+										<div class="sMap__pin" data-city="Самара" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Саратов">
+										<div class="sMap__pin" data-city="Саратов" data-aos="fade-up" data-aos-delay="620" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Волгоград">
+										<div class="sMap__pin" data-city="Волгоград" data-aos="fade-up" data-aos-delay="640" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Ростов на Дону">
+										<div class="sMap__pin" data-city="Ростов на Дону" data-aos="fade-up" data-aos-delay="660" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
 										</div>
-										<div class="sMap__pin" data-city="Краснодар">
+										<div class="sMap__pin" data-city="Краснодар" data-aos="fade-up" data-aos-delay="680" data-aos-once="true">
 											<svg class="icon icon-map-pin ">
 												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
 											</svg>
@@ -1088,8 +1091,8 @@
 					<!-- end sMap-->
 					<!-- start sOurPartners-->
 					<section class="sOurPartners section d-none d-md-block" id="sOurPartners">
-						<div class="container">
-							<div class="section-title">
+						<div class="container" data-aos="fade-up" data-aos-delay="0">
+							<div class="section-title" data-aos="fade-up" data-aos-delay="200">
 								<div class="section-title__row row">
 									<div class="col">
 										<h2>Наши проекты</h2>
@@ -1136,25 +1139,25 @@
 													<div class="swiper-wrapper">
 														<div class="sOurPartners__slide swiper-slide">
 															<div class="sOurPartners__swiper-row row">
-																<div class="col-md-6"><img src="img/sOurPartners-img-1.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-1.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-2.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-2.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-3.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-3.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-4.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-4.png" alt="" loading="lazy"/>
 																</div>
 															</div>
 														</div>
 														<div class="sOurPartners__slide swiper-slide">
 															<div class="sOurPartners__swiper-row row">
-																<div class="col-md-6"><img src="img/sOurPartners-img-2.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-2.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-1.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-1.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-4.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-4.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-3.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-3.png" alt="" loading="lazy"/>
 																</div>
 															</div>
 														</div>
@@ -1190,25 +1193,25 @@
 													<div class="swiper-wrapper">
 														<div class="sOurPartners__slide swiper-slide">
 															<div class="sOurPartners__swiper-row row">
-																<div class="col-md-6"><img src="img/sOurPartners-img-5.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-5.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-6.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-6.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-7.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-7.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-8.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-8.png" alt="" loading="lazy"/>
 																</div>
 															</div>
 														</div>
 														<div class="sOurPartners__slide swiper-slide">
 															<div class="sOurPartners__swiper-row row">
-																<div class="col-md-6"><img src="img/sOurPartners-img-6.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-6.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-5.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-5.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-8.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-8.png" alt="" loading="lazy"/>
 																</div>
-																<div class="col-md-6"><img src="img/sOurPartners-img-7.png" alt="" loading="lazy"/>
+																<div class="col-6 text-center"><img src="img/sOurPartners-img-7.png" alt="" loading="lazy"/>
 																</div>
 															</div>
 														</div>
@@ -1248,7 +1251,7 @@
 					<!-- start sNews-->
 					<section class="sNews section d-none d-md-block" id="sNews">
 						<div class="container">
-							<div class="section-title">
+							<div class="section-title" data-aos="fade-up" data-aos-delay="0">
 								<div class="row">
 									<div class="col">
 										<h2>Новости</h2>
@@ -1271,7 +1274,7 @@
 							</div>
 							<div class="sNews__swiper sNews__swiper--js swiper">
 								<div class="swiper-wrapper">
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="50">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-1.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1284,7 +1287,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="100">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-2.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1297,7 +1300,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="150">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-3.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1310,7 +1313,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="200">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-1.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1323,7 +1326,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="250">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-2.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1336,7 +1339,7 @@
 											</div>
 										</a>
 									</div>
-									<div class="sNews__slide swiper-slide">
+									<div class="sNews__slide swiper-slide" data-aos="fade-up" data-aos-delay="300">
 										<a class="card-item bg-wrap" href="#">
 											<div class="card-item__wrap"><img class="object-fit-js picture-bg" src="img/sNews-img-3.jpg" alt="" loading="lazy"/>
 												<div class="card-item__content">
@@ -1464,7 +1467,8 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="libs/hc-sticky/hc-sticky.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="libs/aos/aos.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 		<script src="js/common.js"></script>
 	</body>

@@ -2,14 +2,15 @@ mixin sAdvantages(data)
 	// start sAdvantages
 	+b.sAdvantages.section#sAdvantages.d-none.d-md-block&attributes(attributes)
 		.container
-			+e.row.row
-				mixin item(i, txt)
-					+e.col.col-md-4
-						+e.item
-							//- +icon(icon)
-							+img(`img/svg/sAdvantages-${i}.svg`)
-							p!= txt
-				+item('1', 'Изготовляем по индивидуальным проектам')
-				+item('2', 'Собственное производство')
-				+item('3', 'Работаем «Под ключ»')
+			+e.wrap
+				+e.row.row
+					mixin item(i, txt)
+						+e.col.col-md-4
+							+e.item
+								//- +icon(icon)
+								+img(`img/svg/sAdvantages-${i}.svg`)
+								p!= txt
+					+item('1', 'Изготовляем по индивидуальным проектам')
+					+item('2', 'Собственное производство')
+					+item('3', 'Работаем «Под ключ»')
 	// end sAdvantages

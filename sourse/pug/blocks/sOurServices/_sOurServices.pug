@@ -2,12 +2,12 @@ mixin sOurServices(data)
 	// start sOurServices
 	+b.SECTION.sOurServices.section#sOurServices&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(data-aos="fade-up" data-aos-delay="0")
 				h2 Наши услуги
 			+e.swiper--js.swiper
 				.swiper-wrapper
 					mixin slide(i, t)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay=`50 * ${i}`)
 							+e.wrap
 								+img(`img/svg/sOurServices-icon-${i}.svg`)
 								p!= t
@@ -17,6 +17,6 @@ mixin sOurServices(data)
 					+slide(4, 'Устройство оснований')
 					+slide(5, 'Строительство')
 					+slide(6, 'Генеральный подряд')
-				+e.arrow-wrap.d-md-none
+				+e.arrow-wrap.d-md-none(data-aos="fade-up" data-aos-delay="0")
 					+arrow
 	// end sOurServices

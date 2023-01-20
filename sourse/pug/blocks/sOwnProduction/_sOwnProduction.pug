@@ -3,13 +3,13 @@ mixin sOwnProduction(data)
 	+b.sOwnProduction.section#sOwnProduction.d-none.d-md-block&attributes(attributes)
 		.container
 			+e.row.row
-				.col-md-6
+				.col-md-6(data-aos="fade-up" data-aos-delay="0")
 					+e.img-wrap
 						.img-wrap-center
 							video(autoplay, loop, muted, playsinline, preload="metadata", uk-video)
-								source(src="video/headerBlock-video.mp4", type="video/mp4")
+								source(src="video/headerBlock-video.MP4", type="video/mp4")
 							//- +img('img/sOwnProduction-bg-1.jpg', 'bg')
-				+e.col.col-md-6
+				+e.col.col-md-6(data-aos="fade-up" data-aos-delay="0")
 					+e.wrap
 						.h4 
 							+img('img/svg/sOwnProduction-svg-1.svg')

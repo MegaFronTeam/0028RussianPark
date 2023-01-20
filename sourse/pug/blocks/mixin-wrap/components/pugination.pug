@@ -24,7 +24,7 @@ mixin pugin()
 	//- 		li.page-item
 	//- 			a.page-link(href='#') 
 	//- 				i(class="fas fa-chevron-right")
-	.pagination-wrapper
+	.pagination-wrapper&attributes(attributes)
 		ul.page-numbers
 			mixin li(n)
 				li
@@ -33,18 +33,12 @@ mixin pugin()
 					else
 						block
 			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev.svg", alt="")
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
+				span.prev.page-numbers.disabled( )
+					+icon('chevron-left')
 			+li()
 				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
+			- for (var x = 2; x <= 5; x++)
 				+li(x)
 			+li()
 				a.next.page-numbers(href='#')
-					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+					+icon('chevron-right')

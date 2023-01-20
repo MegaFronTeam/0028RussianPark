@@ -3,7 +3,7 @@ mixin sThanksBlock(data)
 	+b.SECTION.sThanksBlock.section#sThanksBlock&attributes(attributes)
 		.container
 			+e.slider.swiper.defaultSwiper-js
-				+b.section-title
+				+b.section-title(data-aos="fade-up" data-aos-delay="0")
 					.row
 						.col
 							h2 Благодарности
@@ -12,7 +12,7 @@ mixin sThanksBlock(data)
 								+arrow
 				.swiper-wrapper
 					mixin slide(i)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay='0')
 							+e.img-wrap(href=`img/sThanksBlock-img-lg-${i}.png` data-fancybox="gallery")
 								.img-wrap-center
 									+img(`img/sThanksBlock-img-${i}.png`)

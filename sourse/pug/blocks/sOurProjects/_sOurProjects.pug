@@ -2,7 +2,7 @@ mixin sOurProjects(data)
 	// start sOurProjects
 	+b.SECTION.sOurProjects.section#sOurProjects&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(data-aos="fade-up" data-aos-delay="0")
 				+e.row.row
 					.col
 						h2 Наши проекты
@@ -13,16 +13,16 @@ mixin sOurProjects(data)
 								+icon('chevron-right')
 			+e.swiper--js.swiper
 				+e.row.row.swiper-wrapper
-					+e.col.col-md-6.swiper-slide
+					+e.col.col-md-6.swiper-slide(data-aos="fade-up" data-aos-delay="0")
 						+card('project-item-bg-1.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
-					+e.col.col-md-3.swiper-slide
+					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="50")
 						+card('project-item-bg-2.jpg', 'Ливны', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
-					+e.col.col-md-3.swiper-slide
+					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="100")
 						+card('project-item-bg-3.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
-					+e.col.col-md-3.swiper-slide
+					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="150")
 						+card('project-item-bg-4.jpg', 'Москва ул. Декабристов', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
-					+e.col.col-md-3.swiper-slide
+					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="200")
 						+card('project-item-bg-5.jpg', 'Темрюк', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
-					+e.col.col-md-6.swiper-slide
+					+e.col.col-md-6.swiper-slide(data-aos="fade-up" data-aos-delay="250")
 						+card('project-item-bg-6.jpg', 'Скитские Пруды', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
 	// end sOurProjects
