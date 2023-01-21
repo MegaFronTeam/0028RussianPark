@@ -1,0 +1,115 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sContent/_sContent.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'content-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	.aside-wrap
+		aside
+			+asideContent()
+	.main-center-wrap
+		+header()
+			+topLine
+			+top-nav()
+		main
+			+bigPageHead('', 'page-head-bg-3.jpg')
+			+sContent()
+				.container
+					+e.date(data-aos="fade-up" data-aos-delay="0") 24.07.2019
+					h1.h2(data-aos="fade-up" data-aos-delay="0") Установка арт-объекта&nbsp;&mdash; скамья в&nbsp;виде рыбы в&nbsp;г. Санкт-Петербург, набережная реки Карповка.
+					p(data-aos="fade-up" data-aos-delay="0") Создание арт-объектов, которые становятся символами мест, где они расположены&nbsp;&mdash; показатель качественной, душевной работы. Выполнение скамьи в&nbsp;виде карпа&nbsp;&mdash; выдающийся пример подобного архитектурного искусства. Современные материалы&nbsp;&mdash; влагостойкая фанера и&nbsp;полимочевина (быстрозатвердевающий полимер)&nbsp;&mdash; сохранят парковую мебель от&nbsp;воздействия окружающей среды и&nbsp;продлят срок службы.
+					p(data-aos="fade-up" data-aos-delay="0") Технологии создания параметрических объектов позволили конструкторам исполнить самые смелые дизайнерские решения. Помимо эстетической красоты и&nbsp;привлекательности скамья выполняет прямую функцию и&nbsp;гостеприимно размещает посетителей для отдыха и&nbsp;созерцания.
+					+b.BLOCKQUOTE(data-aos="fade-up" data-aos-delay="0")
+						p Арт-объект &laquo;Рыба Карп&raquo; узнаваем жителями и&nbsp;гостями района. Влагостойкая фанера и&nbsp;полимочевина (быстрозатвердевающий полимер), из&nbsp;которых сделана скамья, призваны сохранить парковую мебель от&nbsp;воздействия окружающей среды и&nbsp;продлить срок службы.
+					ul(data-aos="fade-up" data-aos-delay="0")
+						li Выполнение скамьи в&nbsp;виде карпа&nbsp;&mdash; выдающийся пример подобного архитектурного искусства
+						li Современные материалы
+							ul
+								li Влагостойкая фанера
+								li Полимочевина
+						li Помимо эстетической красоты и&nbsp;привлекательности скамья выполняет прямую функцию
+					+b.media-content(data-aos="fade-up" data-aos-delay="0")
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sContent-img-4.jpg', 'bg')
+						span Арт-объект «Рыба Карп»
+					mixin articleTable(th1, th2, th3, th4)
+						+e.tableWrap(data-aos="fade-up" data-aos-delay="0")
+							table
+								thead
+									tr
+										th(scope='col')!= th1
+										th(scope='col')!= th2
+										th(scope='col')!= th3
+										th(scope='col')!= th4
+								tbody
+									block
+					mixin articleTableContent(thead, td1, td2, td3)
+						tr
+							th(scope='row')!= thead
+							td!= td1
+							td!= td2
+							td!= td3
+					h6 Описание
+					+articleTable('Материал', 'Покраска', 'Фундамент', 'Палитры')
+						+articleTableContent('Дерево', 'Распыление', 'Основание', 'Распыление')
+						+articleTableContent('Термодревесина', 'Краска', 'Свайный', 'Краска')
+						+articleTableContent('Композит', 'Тонировка', 'Плита', 'Тонировка')
+					h3(data-aos="fade-up" data-aos-delay="0") Производство
+					+b.media-content.swiper.defaultSwiper-js(data-aos="fade-up" data-aos-delay="0")
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/sContent-img-5.jpg', 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/sContent-img-5.jpg', 'bg')
+						.row
+							.col-auto
+								+e.arrow-wrap
+									+arrow()
+							.col.order-lg-first
+								span Арт-объект «Рыба Карп»
+					p(data-aos="fade-up" data-aos-delay="0") Опыт работы и&nbsp;производственные ресурсы позволяют компании предлагать изготовление парковой мебели и&nbsp;построек для общественных пространств по&nbsp;стандартным проектам, отлаженным в&nbsp;течение нескольких лет работы, и #[a(href="#") выполнение нестандартных изделий ] по&nbsp;предоставленным клиентами эскизам или фото.
+					ol(data-aos="fade-up" data-aos-delay="0")
+						li Обращение клиента
+						li Разработка 3D-модели
+							ol
+								li Пожелания заказчика
+								li Разработка ЗД модели
+						li Подготовка рабочих чертежей
+					h4(data-aos="fade-up" data-aos-delay="0") О нас
+					h5(data-aos="fade-up" data-aos-delay="0") Структура компании
+					p(data-aos="fade-up" data-aos-delay="0") Сегодня в&nbsp;штате проекта 50&nbsp;человек&nbsp;&mdash; и&nbsp;это не&nbsp;предел. Ведь с&nbsp;ростом количества, масштаба заказов&nbsp;&mdash; растёт и&nbsp;команда. Это слово, объединяющее всех. Только тесное взаимодействие и&nbsp;помощь позволяет компании сдавать объекты в&nbsp;срок, поддерживать планку качества на&nbsp;высоком уровне и&nbsp;развиваться.
+					+b.media-content--video(data-aos="fade-up" data-aos-delay="0")
+						+e.img-wrap
+							.img-wrap-center
+								<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					+e.socials
+						span Поделиться
+						+soc
+							+item-sos('telegram', '#', '#229ED9')
+							+item-sos('vk2', '#', '#4680C2')
+							+item-sos('whatsapp', '#', '#2DB10F')
+			+sNews('Другие новости')
+		+footer() 
+
+
+

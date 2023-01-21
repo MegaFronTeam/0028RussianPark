@@ -1,0 +1,115 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sContent/_sContent.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	.aside-wrap
+		aside
+			+asideContent()
+	.main-center-wrap
+		+header()
+			+topLine
+			+top-nav()
+		main
+			+bigPageHead('', 'page-head-bg-2.jpg', 'true')
+			+sContent()
+				.container
+					+e.date(data-aos="fade-up" data-aos-delay="0") 02.08.2020
+					h1.h2(data-aos="fade-up" data-aos-delay="0") Обустройство входной группы сквера в&nbsp;г. Ливны, Орловская область
+					p(data-aos="fade-up" data-aos-delay="0") Благодаря реализации проекта, место отдыха и&nbsp;развлечений ассоциируется с&nbsp;эстетической красотой и&nbsp;опрятным обликом сквера. Входная группа, которая включает ворота и&nbsp;прилегающую ко&nbsp;входу в&nbsp;сквер территорию, становится визитной карточкой локации. 
+					p(data-aos="fade-up" data-aos-delay="0") Крепкая конструкция возвышается до&nbsp;7&nbsp;метров в&nbsp;коньке, визуально расширяя пространство, использование архитектурного приема облегчает внешний вид, делая его невесомым и&nbsp;ненавязчивым. Ограждающие элементы на&nbsp;проходе не&nbsp;позволяют автомобильному транспорту заехать на&nbsp;территорию сквера, при этом являются почти незаметными для пешеходов.
+					ul(data-aos="fade-up" data-aos-delay="0")
+						li Входная группа, которая включает ворота и&nbsp;прилегающую ко&nbsp;входу в&nbsp;сквер территорию
+						li Входная группа
+							ul
+								li Ворота
+								li Прилегающая территория
+						li Ограждающие элементы
+					+b.media-content(data-aos="fade-up" data-aos-delay="0")
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sContent-img-2.jpg', 'bg')
+						span Скитские Пруды
+					mixin articleTable(th1, th2, th3, th4)
+						+e.tableWrap(data-aos="fade-up" data-aos-delay="0")
+							table
+								thead
+									tr
+										th(scope='col')!= th1
+										th(scope='col')!= th2
+										th(scope='col')!= th3
+										th(scope='col')!= th4
+								tbody
+									block
+					mixin articleTableContent(thead, td1, td2, td3)
+						tr
+							th(scope='row')!= thead
+							td!= td1
+							td!= td2
+							td!= td3
+					h6 Описание
+					+articleTable('Материал', 'Покраска', 'Фундамент', 'Палитры')
+						+articleTableContent('Дерево', 'Распыление', 'Основание', 'Распыление')
+						+articleTableContent('Термодревесина', 'Краска', 'Свайный', 'Краска')
+						+articleTableContent('Композит', 'Тонировка', 'Плита', 'Тонировка')
+					+b.BLOCKQUOTE(data-aos="fade-up" data-aos-delay="0")
+						p История начинается 8 лет назад, когда была основана компания по благоустройству частных загородных территорий «Русская Беседка».
+					h3(data-aos="fade-up" data-aos-delay="0") Производство
+					p(data-aos="fade-up" data-aos-delay="0") Опыт работы и&nbsp;производственные ресурсы позволяют компании предлагать изготовление парковой мебели и&nbsp;построек для общественных пространств по&nbsp;стандартным проектам, отлаженным в&nbsp;течение нескольких лет работы, и #[a(href="#") выполнение нестандартных изделий ] по&nbsp;предоставленным клиентами эскизам или фото.
+					ol(data-aos="fade-up" data-aos-delay="0")
+						li Обращение клиента
+						li Разработка 3D-модели
+							ol
+								li Пожелания заказчика
+								li Разработка ЗД модели
+						li Подготовка рабочих чертежей
+					h4(data-aos="fade-up" data-aos-delay="0") О нас
+					h5(data-aos="fade-up" data-aos-delay="0") Структура компании
+					p(data-aos="fade-up" data-aos-delay="0") Сегодня в&nbsp;штате проекта 50&nbsp;человек&nbsp;&mdash; и&nbsp;это не&nbsp;предел. Ведь с&nbsp;ростом количества, масштаба заказов&nbsp;&mdash; растёт и&nbsp;команда. Это слово, объединяющее всех. Только тесное взаимодействие и&nbsp;помощь позволяет компании сдавать объекты в&nbsp;срок, поддерживать планку качества на&nbsp;высоком уровне и&nbsp;развиваться.
+					+b.media-content.swiper.defaultSwiper-js(data-aos="fade-up" data-aos-delay="0")
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/sContent-img-3.jpg', 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img('img/sContent-img-3.jpg', 'bg')
+						.row
+							.col-auto
+								+e.arrow-wrap
+									+arrow()
+							.col.order-lg-first
+								span Братеевская Пойма
+					+b.media-content--video(data-aos="fade-up" data-aos-delay="0")
+						+e.img-wrap
+							.img-wrap-center
+								<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					+e.socials
+						span Поделиться
+						+soc
+							+item-sos('telegram', '#', '#229ED9')
+							+item-sos('vk2', '#', '#4680C2')
+							+item-sos('whatsapp', '#', '#2DB10F')
+			+sNews('Другие кейсы')
+		+footer() 
+
+
+

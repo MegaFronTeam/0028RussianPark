@@ -142,7 +142,7 @@ body {
 	.main-center-wrap {
 		flex-grow: 1;
 		position: relative;
-		// overflow: hidden;
+		overflow: hidden;
 		width: 100%;
 		@include media-breakpoint-up(md) {
 			width: calc(100% - rem(288));
@@ -619,6 +619,21 @@ iframe {
 			}
 			&__body {
 				padding-bottom: rem(18);
+			}
+		}
+	}
+	.sContent {
+		.media-content {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.content-page {
+	.big-page-head {
+		&__wrap {
+			&:after {
+				background-image: linear-gradient(180deg, rgba(38, 35, 32, 0) 64.93%, rgba(0, 0, 0, 0.7) 100%, rgba(38, 35, 32, 0.7) 100%);
 			}
 		}
 	}

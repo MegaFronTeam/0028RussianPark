@@ -14,15 +14,39 @@ mixin sOurProjects(data)
 			+e.swiper--js.swiper
 				+e.row.row.swiper-wrapper
 					+e.col.col-md-6.swiper-slide(data-aos="fade-up" data-aos-delay="0")
-						+card('project-item-bg-1.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
+						+card({
+							img: 'project-item-bg-1.jpg',
+							title: 'Братеевская Пойма',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						}).card-item--horizontal
 					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="50")
-						+card('project-item-bg-2.jpg', 'Ливны', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+						+card({
+							img: 'project-item-bg-2.jpg',
+							title: 'Ливны',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						})
 					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="100")
-						+card('project-item-bg-3.jpg', 'Братеевская Пойма', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+						+card({
+							img: 'project-item-bg-3.jpg',
+							title: 'Братеевская Пойма',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						})
 					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="150")
-						+card('project-item-bg-4.jpg', 'Москва ул. Декабристов', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+						+card({
+							img: 'project-item-bg-4.jpg',
+							title: 'Москва ул. Декабристов',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						})
 					+e.col.col-md-3.swiper-slide(data-aos="fade-up" data-aos-delay="200")
-						+card('project-item-bg-5.jpg', 'Темрюк', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...')
+						+card({
+							img: 'project-item-bg-5.jpg',
+							title: 'Темрюк',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						})
 					+e.col.col-md-6.swiper-slide(data-aos="fade-up" data-aos-delay="250")
-						+card('project-item-bg-6.jpg', 'Скитские Пруды', 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...').card-item--horizontal
+						+card({
+							img: 'project-item-bg-6.jpg',
+							title: 'Скитские Пруды',
+							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
+						}).card-item--horizontal
 	// end sOurProjects

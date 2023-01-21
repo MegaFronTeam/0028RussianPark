@@ -394,6 +394,11 @@
 				transform: translateY(0);
 			}
 		}
+		.card-item__wrap {
+			&:before {
+				opacity: 0;
+			}
+		}
 	}
 	&__wrap {
 		position: absolute;
@@ -404,6 +409,18 @@
 		width: 100%;
 		height: 100%;
 		justify-content: flex-end;
+		&:before {
+			content: '';
+			@include mt;
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(181.12deg, rgba(45, 41, 38, 0) 47.83%, rgba(38, 35, 32, 0.7) 77.38%);
+			opacity: 1;
+		}
 	}
 	&__content {
 		padding: rem(16);
@@ -413,6 +430,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		z-index: 2;
 	}
 	&__title {
 		font-weight: 600;
@@ -431,9 +449,38 @@
 			transform: translateY(rem(120));
 		}
 	}
+	&__name {
+		font-size: rem(12);
+		font-weight: 600;
+		margin-bottom: auto;
+		line-height: 1.33em;
+	}
+	&__read {
+		display: flex;
+		align-items: center;
+		font-size: rem(12);
+		font-weight: 600;
+		line-height: 1.33em;
+		padding-top: rem(8);
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(16);
+			margin-left: rem(4);
+			color: $secondary;
+		}
+	}
 	&--horizontal {
 		@include media-breakpoint-up(md) {
 			--ratio: 200/447;
+		}
+	}
+	&--media {
+		.card-item {
+			&__wrap {
+				&:before {
+					background-image: linear-gradient(180deg, rgba(62, 62, 66, 0.54) 0%, rgba(48, 48, 52, 0) 49.86%), linear-gradient(181.12deg, rgba(45, 41, 38, 0) 47.83%, rgba(38, 35, 32, 0.7) 77.38%);
+				}
+			}
 		}
 	}
 }
@@ -476,7 +523,38 @@
 		}
 	}
 	&__container {
+		position: relative;
 		width: 100%;
+		z-index: 3;
+	}
+	&__slider {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		overflow: visible;
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			background-image: linear-gradient(180deg, rgba(38, 35, 32, 0) 64.93%, rgba(0, 0, 0, 0.7) 100%, rgba(38, 35, 32, 0.7) 100%);
+			pointer-events: none;
+		}
+		.big-page-head__container {
+			position: absolute;
+			width: 100%;
+			z-index: 3;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			padding-bottom: rem(16);
+		}
 	}
 	h1 {
 		color: #fff;
@@ -484,6 +562,23 @@
 		line-height: 1.12em;
 		@include media-breakpoint-down(md) {
 			font-size: rem(25);
+		}
+	}
+	&__row {
+		align-items: center;
+	}
+	&__text {
+		color: #fff;
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: 1.14em;
+	}
+	&__arrow-wrap {
+		display: flex;
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			bottom: rem(-44);
+			left: rem(16);
 		}
 	}
 }

@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sContent/_sContent.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sPortfolio/_sPortfolio.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	.aside-wrap
+		aside
+			+asideContent()
+	.main-center-wrap
+		+header()
+			+topLine
+			+top-nav()
+		main
+			+sPortfolio
+		+footer() 
+
+
+

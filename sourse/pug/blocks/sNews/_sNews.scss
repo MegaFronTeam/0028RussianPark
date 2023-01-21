@@ -23,9 +23,6 @@
 	}
 	.card-item {
 		--ratio: 1/1;
-		&:after {
-			background-image: linear-gradient(181.12deg, rgba(45, 41, 38, 0) 47.83%, rgba(38, 35, 32, 0.7) 77.38%);
-		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -1,18 +1,243 @@
 
 	// start .sContent
 	.sContent {
-	
+	--sPT: #{rem(16)};
+	--sPB: #{rem(24)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(18)};
+	}
 	.media-content {
+		margin-bottom: rem(48);
 		&__img-wrap {
 			@include block(896, 530);
 			margin-bottom: rem(8);
+			iframe {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		&__arrow-wrap {
 			display: flex;
 		}
-		p {
+		span {
 			font-size: rem(13);
 			line-height: 1.23em;
+		}
+		&--video {
+			margin-bottom: rem(32);
+		}
+	}
+	&__date {
+		font-size: rem(13);
+		line-height: 1.23em;
+		text-align: right;
+		padding-top: rem(6);
+		margin-bottom: rem(17);
+		@include media-breakpoint-up(md) {
+			padding-top: 0;
+			text-align: left;
+		}
+	}
+	h1 {
+		line-height: 1.11em;
+		margin-bottom: rem(24);
+	}
+	p {
+		margin-bottom: rem(16);
+		font-size: rem(16);
+		line-height: 1.33em;
+		font-weight: 500;
+		@include media-breakpoint-up(md) {
+			font-size: rem(15);
+			margin-bottom: rem(32);
+		}
+		a {
+			color: $primary;
+		}
+	}
+	ul {
+		margin-bottom: rem(40);
+		& > * {
+			margin-bottom: rem(20);
+		}
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-left: rem(32);
+			font-weight: 500;
+			margin-bottom: rem(12);
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(4);
+				height: rem(4);
+				border-radius: 50%;
+				background-color: $primary;
+				left: rem(10);
+				top: rem(9);
+			}
+			ul {
+				margin-top: rem(12);
+				margin-bottom: 0;
+				li {
+					&:before {
+						background-color: transparent;
+						border: 1px solid $primary;
+					}
+				}
+			}
+		}
+	}
+	h6 {
+		line-height: 1.25em;
+		margin-bottom: rem(16);
+	}
+	&__tableWrap {
+		overflow-x: auto;
+		position: relative;
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
+		table {
+			width: 100%;
+			min-width: rem(762);
+		}
+	}
+	table {
+		thead {
+			th {
+				padding-bottom: rem(8);
+				font-size: rem(12);
+				font-weight: 600;
+			}
+		}
+		tbody {
+			border-top: none!important;
+			& > tr {
+				&:nth-child(2n) {
+					background-color: $gray-100;
+					color: #000;
+				}
+			}
+			th {
+				padding-left: rem(8);
+			}
+		}
+		th {
+			border-bottom: 1px solid $gray-300;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			font-weight: 500;
+			// color: $black;
+		}
+		td {
+			// color: $black;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			font-weight: 500;
+			border-bottom: rem(1) solid $gray-300;
+		}
+	}
+	blockquote {
+		margin-bottom: rem(32);
+		padding-left: rem(32);
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: rem(24);
+			height: rem(24);
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 17.5264H5L7 13.5264H4V7.52637H10V13.5264L8 17.5264ZM18 17.5264H15L17 13.5264H14V7.52637H20V13.5264L18 17.5264Z' fill='%23B57561'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			top: 0;
+			left: 0;
+		}
+		p {
+			color: $primary;
+			font-size: rem(19);
+			line-height: 1.26em;
+		}
+	}
+	h3 {
+		margin-bottom: rem(24);
+		line-height: 1.25em;
+	}
+	.container > ol {
+		counter-reset: num;
+	}
+	ol {
+		padding-left: 0;
+		margin-bottom: rem(40);
+		// ol {
+		// 	padding-left: 0;
+		// 	margin-left: 0;
+		// 	margin-top: rem(8);
+		// 	margin-bottom: rem(12);
+		// 	@include media-breakpoint-up(lg) {
+		// 		margin-top: rem(16);
+		// 		margin-bottom: rem(24);
+		// 	}
+		// }
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: rem(49);
+		// }
+		// margin-bottom: rem(23);
+		counter-reset: num2;
+		li {
+			list-style-type: none;
+			position: relative;
+			margin-bottom: rem(20);
+			font-weight: 500;
+			&::before {
+				content: counter(num)". ";
+				counter-increment: num;
+			}
+			ol {
+				padding-top: rem(12);
+				padding-left: rem(32);
+				margin-bottom: 0;
+			}
+			li {
+				list-style-type: none;
+				position: relative;
+				margin-bottom: rem(12);
+				&::before {
+					content: counter(num)"."counter(num2)". ";
+					counter-increment: num2;
+				}
+			}
+		}
+	}
+	h4 {
+		margin-bottom: rem(24);
+		line-height: 1.23em;
+	}
+	h5 {
+		margin-bottom: rem(24);
+		line-height: 1.20em;
+	}
+	&__socials {
+		span {
+			display: block;
+			font-weight: 500;
+			margin-bottom: rem(8);
+		}
+		.soc {
+			&__item {
+				width: rem(48);
+				height: rem(48);
+				border: 1px solid rgba($color: $primary, $alpha: .5);
+				border-radius: 4px;
+				.icon {
+					font-size: rem(24);
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

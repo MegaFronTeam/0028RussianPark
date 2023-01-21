@@ -44,12 +44,27 @@ mixin page-head(...items)
 		+e.container.container
 			+breadcrumb('Главная',...items)
 
-mixin bigPageHead(t, img)
+mixin bigPageHead(t, img, slider)
 	+b.big-page-head
-		+e.wrap.bg-wrap
-			+img(`img/${img}`, 'bg').picture-bg
-			+e.container.container
-				h1!= t
+		if slider
+			+e.slider.swiper.defaultSwiper-js
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+img(`img/${img}`, 'bg').picture-bg
+					+e.slide.swiper-slide
+						+img(`img/${img}`, 'bg').picture-bg
+				+e.container.container
+					+e.row.row
+						.col
+							+e.text Ливны, Орловская область
+						.col-auto
+							+e.arrow-wrap
+								+arrow
+		else
+			+e.wrap.bg-wrap
+				+img(`img/${img}`, 'bg').picture-bg
+				+e.container.container
+					h1!= t
 
 mixin asideContent()
 	+b.aside
@@ -84,14 +99,21 @@ mixin asideContent()
 			+link('11', 'Ярмарочные домики')
 			+link('12', 'Административные здания')
 
-mixin card(img, title, text)
+mixin card(data)
 	+b.card-item.bg-wrap(href='#')&attributes(attributes)
 		+e.wrap
-			+img(`img/${img}`, 'bg').picture-bg
+			+img(`img/${data.img}`, 'bg').picture-bg
 			+e.content
-				+e.title!= title
-				+e.text-wrap
-					p!= text
+				if data.name
+					+e.name(class=data.name.class)!= data.name.text
+				+e.title!= data.title
+				if data.read
+					+e.read 
+						| Перейти в источник
+						+icon('open')
+				if data.text
+					+e.text-wrap
+						p!= data.text
 
 mixin product-item(i, t, pr)
 	+b.ARTICLE.product-item

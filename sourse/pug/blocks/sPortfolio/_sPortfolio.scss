@@ -1,0 +1,49 @@
+// start .sPortfolio
+.sPortfolio {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(32)};
+		--sPB: #{rem(72)};
+		--sTPB: #{rem(28)};
+	}
+	&__container {
+		@include media-breakpoint-down(md) {
+			--c-g: 0;
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+		
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(16)};
+		}
+	}
+	&__col {
+		@media (max-width: 360px) {
+			width: 100%;
+		}
+	}
+	.section-title{
+		@include media-breakpoint-down(md) {
+			padding: 0 rem(16);
+		}
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	.card-item {
+		--ratio: 1/1;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPortfolio
