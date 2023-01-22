@@ -17,7 +17,7 @@ mixin topLine()
 				.col-auto
 					+link('telegram', 'Telegram')
 				.col-auto.ms-lg-auto
-					+e.btn--light.btn(href="#") Заказать презентацию
+					+e.btn--light.btn(href="#" data-src='modal-order-presentation' data-fancybox="modal") Заказать презентацию
 				.col-auto
-					+e.btn.btn.btn-primary(href="#") Оставить заявку
+					+e.btn.btn.btn-primary(href="#" data-src='modal-call' data-fancybox="modal") Оставить заявку
 	// end topLine

@@ -5,16 +5,39 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	@include media-breakpoint-down(md) {
+		height: 100%;
+	}
 }
+
+.fancybox__slide {
+	@include media-breakpoint-down(md) {
+		padding: 0;
+	}
+	&::before, &::after {
+		@include media-breakpoint-down(md) {
+			content: unset;
+		}
+	}
+}
+
 .modal-win {
 	// display: block;
-	background-color: #fff;
+	background-color: $gray-300;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(965);
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: 0;
+	@include media-breakpoint-down(md) {
+		height: 100%;
+	}
+	&__row {
+		--bs-gutter-x: 0;
+	}
+	&__img-bg {
+		height: 100%;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -24,6 +47,95 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	.form-wrap {
+		
+		padding: rem(48) rem(16) rem(40);
+		@include media-breakpoint-up(md) {
+			padding: rem(62);
+		}
+		&__row {
+			--bs-gutter-x: 0;
+			--bs-gutter-y: #{rem(16)};
+		}
+		&__title {
+			font-size: rem(19);
+			font-weight: 600;
+			line-height: 1.26em;
+			text-align: center;
+		}
+		&__btn {
+			--bs-btn-font-size: #{rem(12)};
+			--bs-btn-padding-y: #{rem(10)};
+
+			width: 100%;
+		}
+		&__input-wrap {
+			position: relative;
+			.required {
+				position: absolute;
+				left: rem(-2);
+				bottom: rem(26);
+				font-size: rem(17);
+				line-height: 1;
+				color: $gray-500;
+			}
+		}
+		&__input {
+			background-color: $gray-100;
+			border-color: $gray-400;
+		}
+		textarea {
+			min-height: rem(124);
+			border-radius: rem(19);
+		}
+		&__chosen-product {
+			display: flex;
+			background-color: $gray-100;
+			border-radius: 8px;
+			padding: rem(8);
+			img {
+				flex: 0 0 auto;
+				width: 100%;
+				max-width: rem(72);
+				margin-right: rem(16);
+			}
+			p {
+				font-size: rem(13);
+				line-height: 1.23em;
+				margin-bottom: auto;
+			}
+		}
+		&__chosen-product-content {
+			display: flex;
+			flex-direction: column;
+		}
+		&__chosen-product-title {
+			font-size: rem(14);
+			font-weight: 600;
+			margin-bottom: rem(8);
+			line-height: 1.14em;
+		}
+		&__chosen-product-price {
+			font-size: rem(14);
+			font-weight: 600;
+			line-height: 1.14em;
+		}
+	}
+}
+
+.fancybox__content>.carousel__button.is-close {
+	--fancybox-color: #{$secondary};
+	--carousel-button-width: #{rem(24)};
+	--carousel-button-height: #{rem(24)};
+
+	top: rem(16);
+	right: rem(16);
+	svg {
+		--carousel-button-svg-width: #{rem(14)};
+		--carousel-button-svg-height: #{rem(14)};
+
+		filter: none;
 	}
 }
 

@@ -4,14 +4,91 @@ mixin modal()
 	//- a(href="modal-call").link-modal-js modal-call 
 	div(id="modal-call"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+			+e.row.row
+				.col-md-6.d-none.d-md-block
+					+e.img-bg.bg-wrap
+						+img('img/modal-bg-1.jpg', 'bg').picture-bg
+				.col-md-6
+					+form-wrap
+						+e.row.row
+							.col-12
+								+e.title.form-data Оставить заявку
+							.col-12
+								+input("Введите свое имя", 'text', 'Имя')(required)
+									span.required *
+							.col-12
+								+input("Введите название компании", 'text', 'Название компании')
+							.col-12
+								+input("+7(ХХХ)-ХХХ-ХХ-ХХ", 'tel', 'Телефон')(required)
+									span.required *
+							.col-12
+								+input("Введите свой E-mail", 'email', 'E-mail')(required)
+									span.required *
+							.col-12
+								+input("Введите сообщение", 'textarea', 'Сообщение')
+							.col-12
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+							.col-12
+								+policy2()
 	// #modal-call
+
+	div(id="modal-order-presentation"  style="display: none" )
+		+b.modal-win
+			+e.row.row
+				.col-md-6.d-none.d-md-block
+					+e.img-bg.bg-wrap
+						+img('img/modal-bg-2.jpg', 'bg').picture-bg
+				.col-md-6
+					+form-wrap
+						+e.row.row
+							.col-12
+								+e.title.form-data Заказать презентацию
+							.col-12
+								+input("Введите свое имя", 'text', 'Имя')(required)
+									span.required *
+							.col-12
+								+input("+7(ХХХ)-ХХХ-ХХ-ХХ", 'tel', 'Телефон')(required)
+									span.required *
+							.col-12
+								+input("Введите свой E-mail", 'email', 'E-mail')(required)
+									span.required *
+							.col-12
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Заказать
+							.col-12
+								+policy2()
+	// #modal-order-presentation
+
+	div(id="modal-call2"  style="display: none" )
+		+b.modal-win
+			+e.row.row
+				.col-md-6.d-none.d-md-block
+					+e.img-bg.bg-wrap
+						+img('img/modal-bg-3.jpg', 'bg').picture-bg
+				.col-md-6
+					+form-wrap
+						+e.row.row
+							.col-12
+								+e.title.form-data Оставить заявку
+							.col-12
+								+e.chosen-product(href='#')
+									+img('img/chosen-product-img-1.jpg', 'bg')
+									+e.chosen-product-content
+										+e.chosen-product-title Парковые качели «Пагода_2»
+										p Размер 1067×2325 мм
+										+e.chosen-product-price 102 990 ₽
+							.col-12
+								+input("Введите свое имя", 'text', 'Имя')(required)
+									span.required *
+							.col-12
+								+input("+7(ХХХ)-ХХХ-ХХ-ХХ", 'tel', 'Телефон')(required)
+									span.required *
+							.col-12
+								+input("Введите свой E-mail", 'email', 'E-mail')(required)
+									span.required *
+							.col-12
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+							.col-12
+								+policy2()
+	// #modal-order-presentation
 	
 	// end modals

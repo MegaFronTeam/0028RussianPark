@@ -27,11 +27,11 @@ mixin top-nav()
 						.menu-mobile__inner 
 							+search.d-lg-none
 							+mnu()
-							+e.inner-btn.btn.btn-primary.d-lg-none(href='#') Заказать презентацию
+							+e.inner-btn.btn.btn-primary.d-lg-none(href='#' data-src='modal-order-presentation' data-fancybox="modal") Заказать презентацию
 				.col-auto.d-none.d-lg-block
 					+search
 				.col-auto.order-lg-last.d-lg-none
-					+e.btn.btn.btn-primary(href="#") Оставить заявку
+					+e.btn.btn.btn-primary(href="#" data-src='modal-call' data-fancybox="modal") Оставить заявку
 					+b.top-btns-wrap
 						.container
 							+b.top-btns

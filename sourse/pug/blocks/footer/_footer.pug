@@ -16,11 +16,11 @@ mixin footer()
 							+content('Обратная связь')
 								ul
 									li
-										a(href="#") Написать директору
+										a(href="#" data-src='modal-call' data-fancybox="modal") Написать директору
 									li
-										a(href="#") Задать вопрос
+										a(href="#" data-src='modal-call' data-fancybox="modal") Задать вопрос
 									li
-										a(href="#") Перезвоните мне
+										a(href="#" data-src='modal-call' data-fancybox="modal") Перезвоните мне
 						.col-12.d-none.d-lg-block
 							+content('Режим работы')
 								ul
@@ -41,6 +41,6 @@ mixin footer()
 						p &copy;&nbsp;2019&ndash;#[span] &laquo;Русский Парк&raquo;&nbsp;&mdash;<br>Московская область. Все права защищены
 					.col-lg-auto
 						a(href="#") Политика конфиденциальности
-						a(href="#") 
+						a(href="https://www.coalla.ru/ ", target="_blank", rel="noopener noreferrer")
 							+icon('designLogo')
 							| Сделано в Coalla Agency
