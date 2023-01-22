@@ -1,0 +1,407 @@
+mixin sSearchResult(isNothing)
+	// start sSearchResult
+	+b.SECTION.sSearchResult.section#sSearchResult&attributes(attributes)
+		if isNothing
+			.container
+				+b.section-title(data-aos="fade-up" data-aos-delay="0")
+					+b.search
+						+search()
+						+e.find Найдено 0 результатов
+				+e.sorry Извините, по вашему запросу ничего не найдено. Измените поисковый запрос.
+		else
+			+e.container.container.tabs
+				+b.section-title(data-aos="fade-up" data-aos-delay="0")
+					+b.search
+						+search()
+						+e.find Найдено 18 результатов
+						+e.dropdown
+							+e.item(href='#') Качели
+							+e.item(href='#') Качалка
+					.tabs__caption
+						.tabs__btn.btn.btn-light.active Товары
+						.tabs__btn.btn.btn-light Портфолио
+						.tabs__btn.btn.btn-light Новости
+				.tabs__content.active
+					+e.wrap(data-aos="fade-up" data-aos-delay="0")
+						+e.row.row
+							-for(let i = 0; i < 7; i++)
+								.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+									+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+								.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+									+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', 'Цена по запросу')
+								.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+									+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+								.col-6.col-md-3(data-aos="fade-up" data-aos-delay="0")
+									+product-item(1, 'Парковые качели &laquo;Пастораль&raquo;', '102 990 ₽')
+					+pugin()(data-aos="fade-up" data-aos-delay="0")
+				.tabs__content
+					+e.card-row.row
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+									img: 'sNewsBlock-img-1.jpg',
+									title: 'Обустройство входной группы сквера в г. Ливны, Орловская область',
+									text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+								})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-2.jpg',
+								title: 'Поставка беседок вдоль автомобильной дороги М-2 Крым',
+								text: 'Беседки, которые построены компанией &laquo;Русский Парк&raquo;, призваны дать отдых дальнобойщикам и&nbsp;обычным туристам, которые устали в&nbsp;пути. Подробнее&nbsp;&mdash; в&nbsp;публикации.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-3.jpg',
+								title: 'Благоустройство центрального парка&nbsp;им. П.&nbsp;П.&nbsp;Белоусова',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-4.jpg',
+								title: 'Благоустройство центрального парка им. П. П. Белоусова',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-5.jpg',
+								title: 'Благоустройство университетских территорий в городе Красноярске',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-6.jpg',
+								title: 'Поставка сцены, ярмарочных домиков, пергол и МАФов в г.Тутаев',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-2.jpg',
+								title: 'Муниципальное учреждение культуры «Опочининская межпоселенческая библиотека Мышкинского муниципального района» Ярославская область, г. Мышкин, ул. Никольская 18',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-7.jpg',
+								title: 'Доставка и установка ярмарочных домиков в городе Тула',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-8.jpg',
+								title: 'Благоустройство территории памятника природы в Битцевском лесу',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-9.jpg',
+								title: 'В Ноябрьске открылся крупнейший парк Ямала',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-10.jpg',
+								title: 'Благоустройство набережной реки Кама в республике Татарстан',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-5.jpg',
+								title: 'Г. Москва, ул. Удальцова 85 А. Товарищество собственников жилья «ВЕСТ-САЙД», Проектирование, Доставка и установка/монтаж изделия',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-11.jpg',
+								title: 'Г. Москва, ул. Удальцова 85 А. Товарищество собственников жилья «ВЕСТ-САЙД», Проектирование, Доставка и установка/монтаж изделия',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-12.jpg',
+								title: 'Благоустройство придомовой территории, жилой застройки «ЭкоВидное 2», по адресу: Московская область, Ленинский муниципальный район, поселок Горки Ленинские.',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-13.jpg',
+								title: 'Установка арт-объекта возле Центра образования №4 в г. Тула',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-14.jpg',
+								title: 'Благоустройство православного храма в Москве, Чистый переулок, 8',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-15.jpg',
+								title: 'Благоустройство православного храма в Москве, Чистый переулок, 8',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-16.jpg',
+								title: 'Реконструкция территории Ноябрьского городского парка идет согласно графику',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-17.jpg',
+								title: 'Поставка кашпо из лиственницы в кол-ве 76 штук для государственного бюджетного учреждения культуры города Москвы «Музей- усадьба «Кусково»»',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-18.jpg',
+								title: 'Г. Москва, район Котловка, пр-д Векшинского. Заказчик: Жилищник района Котловка Установка пергол трех типов',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-19.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-20.jpg',
+								title: 'Г. Москва, район Котловка, пр-д Векшинского. Заказчик: Жилищник района Котловка Установка пергол трех типов',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-21.jpg',
+								title: 'Благоустройство сквера Смородина в Тульской области, поселок Одоев',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-22.jpg',
+								title: 'Заказчик: Ассоциация «Совет муниципальных образований Воронежской области» Воронежская область, Панинский район, с. Сергеевка, ул. Заречная, 38. ВХОДНАЯ ГРУППА — 1шт СЦЕНА 4х6 м — 1шт Свайно – винтовой фундамент на два строения',
+								text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно узнать по&nbsp;массивной конструкции.'
+							})
+					+pugin()(data-aos="fade-up" data-aos-delay="0")
+				.tabs__content
+					+e.card-row.row
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-17.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка. ',
+								read: true,
+								name: {
+									class: 'text-secondary',
+									text: 'Вечерняя Москва'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-23.jpg',
+								title: 'В Ноябрьске открылся крупнейший парк Ямала',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-24.jpg',
+								title: 'Благоустройство придомовой территории, жилой застройки «ЭкоВидное 2», по адресу: Московская область, Ленинский муниципальный район, поселок Горки Ленинские.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-25.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									text: 'Москва 24'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-26.jpg',
+								title: 'Благоустройство сквера в г. Москве, ул. Бестужевых-Пестеля-Декабристов, оформление: скамья уличная Консоль -4, Пергола ПА 4 (6270х4350х3390), скамейки к перголам -76',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-27.jpg',
+								title: 'Реконструкция главного городского парка Ноябрьска продолжится в 2019 году.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-23.jpg',
+								title: 'В Ноябрьске открылся крупнейший парк Ямала',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-24.jpg',
+								title: 'Благоустройство придомовой территории, жилой застройки «ЭкоВидное 2», по адресу: Московская область, Ленинский муниципальный район, поселок Горки Ленинские.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-28.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									class: 'text-secondary', 
+									text: 'Вечерняя Москва'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-26.jpg',
+								title: 'Благоустройство сквера в г. Москве, ул. Бестужевых-Пестеля-Декабристов, оформление: скамья уличная Консоль -4, Пергола ПА 4 (6270х4350х3390), скамейки к перголам -76',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-27.jpg',
+								title: 'Реконструкция главного городского парка Ноябрьска продолжится в 2019 году.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-25.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									text: 'Вечерняя Москва'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-28.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									class: 'text-secondary',
+									text: 'Москва 24'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-23.jpg',
+								title: 'В Ноябрьске открылся крупнейший парк Ямала',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-24.jpg',
+								title: 'Благоустройство придомовой территории, жилой застройки «ЭкоВидное 2», по адресу: Московская область, Ленинский муниципальный район, поселок Горки Ленинские.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-25.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									text: 'Москва 24'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-26.jpg',
+								title: 'Благоустройство сквера в г. Москве, ул. Бестужевых-Пестеля-Декабристов, оформление: скамья уличная Консоль -4, Пергола ПА 4 (6270х4350х3390), скамейки к перголам -76',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-27.jpg',
+								title: 'Реконструкция главного городского парка Ноябрьска продолжится в 2019 году.',
+								read: true,
+								name: {
+									text: 'Вечерняя Москва'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-23.jpg',
+								title: 'В Ноябрьске открылся крупнейший парк Ямала',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-24.jpg',
+								title: 'Благоустройство придомовой территории, жилой застройки «ЭкоВидное 2», по адресу: Московская область, Ленинский муниципальный район, поселок Горки Ленинские.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-28.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									class: 'text-secondary',
+									text: 'Вечерняя Москва'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-26.jpg',
+								title: 'Благоустройство сквера в г. Москве, ул. Бестужевых-Пестеля-Декабристов, оформление: скамья уличная Консоль -4, Пергола ПА 4 (6270х4350х3390), скамейки к перголам -76',
+								read: true,
+								name: {
+									text: 'РИАМО'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-27.jpg',
+								title: 'Реконструкция главного городского парка Ноябрьска продолжится в 2019 году.',
+								read: true,
+								name: {
+									text: 'Московский дневник'
+								}
+							}).card-item--media
+						+e.col.col-6.col-md-4(data-aos="fade-up" data-aos-delay="0")
+							+card({
+								img: 'sNewsBlock-img-25.jpg',
+								title: 'Установка арт-объекта – скамья в виде рыбы в г. Санкт-Петербург, набережная реки Карповка.',
+								read: true,
+								name: {
+									text: 'Москва 24'
+								}
+							}).card-item--media
+					+pugin()(data-aos="fade-up" data-aos-delay="0")
+	// end sSearchResult

@@ -10,7 +10,7 @@ include ../blocks/sPortfolio/_sPortfolio.pug
 include ../blocks/sNews/_sNews.pug
 
 block variables
-	- let  mainPage= '' 
+	- let  mainPage= 'content-page' 
 	- let  bg= null
 
 block title
@@ -27,6 +27,7 @@ block pagecontent
 			+topLine
 			+top-nav()
 		main
+			+page-head('Кейс', 'Обустройство входной группы сквера в г. Ливны, Орловская область')
 			+bigPageHead('', 'page-head-bg-2.jpg', 'true')
 			+sContent()
 				.container

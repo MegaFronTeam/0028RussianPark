@@ -2,8 +2,115 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+b.section-title(data-aos="fade-up" data-aos-delay="0")
+				h1.h4 Контакты
 			+e.row.row
+				mixin item(data)
+					+e.item(data-aos="fade-up" data-aos-delay="0")
+						if data.title
+							+e.title!= data.title
+						if data.text.href
+							+e.text(href=data.text.href)!= data.text.p
+						else
+							+e.text!= data.text.p
+				.col-md-4
+					+e.card(data-aos="fade-up" data-aos-delay="0")
+						+img('img/svg/sContact-icon-1.svg')
+						+e.info 
+							+icon('pin')
+							| Москва, ул. Рябиновая, 37,  стр. 1
+						+e.info(href="mailto:gmail") 
+							+icon('mail')
+							| rbesedka@gmail.com
+						+item({
+							title: 'Отдел продаж',
+							text: {
+								href: 'tel:+79959087878',
+								p: '+7 995 908 78 78'
+							}
+						})
+						+item({
+							title: 'Отдел снабжения',
+							text: {
+								href: 'tel:+79959677588',
+								p: '+7 995 967 75 88'
+							}
+						})
+						+item({
+							title: 'Отдел кадров',
+							text: {
+								href: 'tel:79959088854',
+								p: '7 995 908 88 54'
+							}
+						})
+						+item({
+							title: 'Бухгалтерия',
+							text: {
+								href: 'tel:+79092577260',
+								p: '+7 909 257 72 60'
+							}
+						})
+						+soc
+							+item-sos('vk', '#', '#4680C2')
+							+item-sos('whatsapp', '#', '#2DB10F')
+							+item-sos('telegram', '#', '#229ED9')
+				.col-md-4
+					+e.card(data-aos="fade-up" data-aos-delay="0")
+						+img('img/svg/sContact-icon-2.svg')
+						h6 Реквизиты
+						+e.large-text ООО «Русский Парк»
+						+item({
+							title: 'Юридический адрес',
+							text: {
+								p: '214009, г. Смоленск, Рославльское шоссе 5 км. стр. 4 офис. 1',
+							}
+						})
+						+item({
+							title: 'ОГРН',
+							text: {
+								p: '1176733012576',
+							}
+						})
+						+item({
+							title: 'ИНН',
+							text: {
+								p: '6732147556',
+							}
+						})
+						+item({
+							title: 'КПП',
+							text: {
+								p: '673201001',
+							}
+						})
+				.col-md-4
+					+e.card(data-aos="fade-up" data-aos-delay="0")
+						+img('img/svg/sContact-icon-3.svg')
+						+e.block
+							h6 Платежные реквизиты
+							+item({
+								title: 'Р/С',
+								text: {
+									p: '40702810859000010277',
+								}
+							})
+							+item({
+								title: 'Наименование банка',
+								text: {
+									p: '1176733СМОЛЕНСКОЕ ОТДЕЛЕНИЕ N8609 ПАО СБЕРБАНК012576',
+								}
+							})
+						h6 Реквизиты банка
+						+item({
+							title: 'К/С',
+							text: {
+								p: '30101810000000000632',
+							}
+						})
+						+item({
+							title: 'БИК',
+							text: {
+								p: '046614632',
+							}
+						})
 	// end sContact

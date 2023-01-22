@@ -6,3 +6,7 @@
 6. <https://megafronteam.github.io/0028RussianPark/public/06-portfolio.html>
 7. <https://megafronteam.github.io/0028RussianPark/public/07-case.html>
 8. <https://megafronteam.github.io/0028RussianPark/public/08-news.html>
+9. <https://megafronteam.github.io/0028RussianPark/public/09-contacts.html>
+10. <https://megafronteam.github.io/0028RussianPark/public/10-search-result.html>
+11. <https://megafronteam.github.io/0028RussianPark/public/10-search-result-2.html>
+12. <https://megafronteam.github.io/0028RussianPark/public/11-page-404.html>

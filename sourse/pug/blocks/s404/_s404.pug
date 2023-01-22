@@ -1,0 +1,11 @@
+mixin s404(data)
+	// start s404
+	+b.s404.section#s404.bg-wrap&attributes(attributes)
+		+e.img.picture-bg
+			+img('img/s404-bg.jpg', 'bg')
+		.container.text-center
+			+img('img/svg/logoWhite.svg').logo
+			+e.title 404
+			p Страница не найдена. Она не существовала или срок публикации истёк.
+			+e.btn.btn.btn-primary(href='#') На главную
+	// end s404

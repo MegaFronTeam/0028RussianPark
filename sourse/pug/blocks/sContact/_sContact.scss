@@ -1,25 +1,85 @@
 
 	// start .sContact
 	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPT: #{rem(16)};
+	--sPB: #{rem(32)};
+	--sTPB: #{rem(16)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(32)};
+		--sPB: #{rem(48)};
+		--sTPB: #{rem(32)};
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
 
 	}
 	.section-title{
-		
+		h1 {
+			line-height: 1.26em;
+			margin-bottom: 0;
+		}
 	}
-	&__col{
-
+	&__card {
+		background-color: $gray-100;
+		padding: rem(16);
+		height: 100%;
+		img {
+			width: 100%;
+			max-width: rem(72);
+			margin-bottom: rem(24);
+		}
+		h6 {
+			margin-bottom: 0;
+			line-height: 1.25em;
+		}
 	}
-	&__item{
-
+	&__info {
+		position: relative;
+		padding-left: rem(32);
+		font-weight: 500;
+		margin-bottom: rem(8);
+		display: block;
+		.icon {
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: rem(24);
+		}
 	}
-	&__slide{
-		height: auto;
+	&__item {
+		padding-top: rem(16);
+	}
+	&__title {
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: 1.14em;
+		margin-bottom: rem(8);
+	}
+	&__text {
+		font-weight: 500;
+		line-height: 1.33em;
+	}
+	.soc {
+		padding-top: rem(16);
+		&__item {
+			background-color: rgba($color: #E6E2E0, $alpha: .5);
+			&:hover {
+				background-color: $primary;
+			}
+			.icon {
+				font-size: rem(24);
+			}
+		}
+	}
+	&__large-text {
+		font-weight: 500;
+		margin-bottom: rem(8);
+		line-height: 1.33em;
+		padding-top: rem(16);
+	}
+	&__block {
+		margin-bottom: rem(32);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
