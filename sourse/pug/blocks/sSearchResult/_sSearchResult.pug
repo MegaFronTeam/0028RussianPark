@@ -7,14 +7,14 @@ mixin sSearchResult(isNothing)
 					+b.search
 						+search()
 						+e.find Найдено 0 результатов
-				+e.sorry Извините, по вашему запросу ничего не найдено. Измените поисковый запрос.
+				+e.sorry(data-aos="fade-up" data-aos-delay="0") Извините, по вашему запросу ничего не найдено. Измените поисковый запрос.
 		else
 			+e.container.container.tabs
 				+b.section-title(data-aos="fade-up" data-aos-delay="0")
 					+b.search
 						+search()
 						+e.find Найдено 18 результатов
-						+e.dropdown
+						+e.dropdown(style='display: none;')
 							+e.item(href='#') Качели
 							+e.item(href='#') Качалка
 					.tabs__caption
