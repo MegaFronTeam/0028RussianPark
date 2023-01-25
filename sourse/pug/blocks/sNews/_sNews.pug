@@ -1,7 +1,7 @@
 mixin sNews(title)
 	// start sNews
-	+b.SECTION.sNews.section#sNews.d-none.d-md-block&attributes(attributes)
-		.container
+	+b.SECTION.sNews.section#sNewsk&attributes(attributes)
+		+e.container.container
 			+b.section-title(data-aos="fade-up" data-aos-delay="0")
 				.row
 					.col
@@ -11,40 +11,5 @@ mixin sNews(title)
 							+arrow()
 			+e.swiper--js.swiper
 				.swiper-wrapper
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="50")
-						+card({
-							img: 'sNews-img-1.jpg',
-							title: 'Строительство &laquo;под ключ&raquo; открытого летнего кафе-веранды в&nbsp;г. Москва, ЦАО, ул. Балчуг, д.1.',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
-						})
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="100")
-						+card({
-							img: 'sNews-img-2.jpg',
-							title: 'Поставка сцены, ярмарочных домиков, пергол и&nbsp;МАФов в&nbsp;г.Тутаев',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...'
-						})
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="150")
-						+card({
-							img: 'sNews-img-3.jpg',
-							title: 'Благоустройство центрального парка&nbsp;им. П.&nbsp;П.&nbsp;Белоусова',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...'
-						})
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="50")
-						+card({
-							img: 'sNews-img-1.jpg',
-							title: 'Строительство &laquo;под ключ&raquo; открытого летнего кафе-веранды в&nbsp;г. Москва, ЦАО, ул. Балчуг, д.1.',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно..'
-						})
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="100")
-						+card({
-							img: 'sNews-img-2.jpg',
-							title: 'Поставка сцены, ярмарочных домиков, пергол и&nbsp;МАФов в&nbsp;г.Тутаев',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...'
-						})
-					+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay="150")
-						+card({
-							img: 'sNews-img-3.jpg',
-							title: 'Благоустройство центрального парка&nbsp;им. П.&nbsp;П.&nbsp;Белоусова',
-							text: 'Не&nbsp;все постройки отличает ажурность и&nbsp;миниатюрность&nbsp;&mdash; эту входную группу можно...'
-						})
+					block
 	// end sNews

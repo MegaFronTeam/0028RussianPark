@@ -483,6 +483,20 @@
 			}
 		}
 	}
+	&--noHover {
+		&:hover {
+			&:after {
+				opacity: 0;
+			}
+		}
+		.card-item {
+			&__wrap {
+				&:before {
+					opacity: 1 !important;
+				}
+			}
+		}
+	}
 }
 .page-head {
 	.swiper {

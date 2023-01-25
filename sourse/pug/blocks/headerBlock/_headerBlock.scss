@@ -43,6 +43,7 @@
 		h1 {
 			margin-bottom: rem(8);
 			line-height: 1.12em;
+			max-width: rem(1100);
 			@include media-breakpoint-down(md) {
 				font-size: rem(25);
 			}

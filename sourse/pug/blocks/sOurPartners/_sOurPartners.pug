@@ -1,4 +1,4 @@
-mixin sOurPartners(isDefault=true)
+mixin sOurPartners(firstTitle='Клиенты', secondTitle='Поставщики')
 	// start sOurPartners
 	+b.SECTION.sOurPartners.section#sOurPartners(class = (isDefault == true ? "d-none d-md-block" : ""))&attributes(attributes)
 		.container(data-aos="fade-up" data-aos-delay="0")
@@ -6,127 +6,76 @@ mixin sOurPartners(isDefault=true)
 				+e.row.row
 					.col
 						h2 Наши партнеры 
-					.col-auto
+					.col-auto.d-none.d-md-block
 						+e.all-content(href='#')
 							| Все проекты
 							+e.icon-wrap
 								+icon('chevron-right')
 			+e.row.row
 				.col-md-6
-					if isDefault
-						+e.content
-							+e.slider-wrap
-								+e.head
-									.row
-										.col
-											+e.title Клиенты
-										.col-auto
-											+e.arrow-wrap
-												+arrow
-								+e.body
-									+e.swiper--js.swiper
-										.swiper-wrapper
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-							+e.slider-wrap
-								+e.head
-									.row
-										.col
-											+e.title Поставщики
-										.col-auto
-											+e.arrow-wrap
-												+arrow
-								+e.body
-									+e.swiper--js.swiper
-										.swiper-wrapper
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-5.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-6.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-7.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-8.png')
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-6.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-5.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-8.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-7.png')
-					else
-						+e.content
-							+e.slider-wrap
-								+e.head
-									.row
-										.col
-											+e.title Клиенты
-										.col-auto
-											+e.arrow-wrap
-												+arrow
-								+e.body
-									+e.swiper--js.swiper
-										.swiper-wrapper
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-											+e.slide.swiper-slide
-												+e.swiper-row.row
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-2.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-4.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-1.png')
-													.col-6.text-center
-														+img('img/sOurPartners-img-3.png')
-
+					+e.content
+						+e.slider-wrap
+							+e.head
+								.row
+									.col
+										+e.title!= firstTitle
+									.col-auto
+										+e.arrow-wrap
+											+arrow
+							+e.body
+								+e.swiper--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.swiper-row.row
+												.col-6.text-center
+													+img('img/sOurPartners-img-1.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-2.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-3.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-4.png')
+										+e.slide.swiper-slide
+											+e.swiper-row.row
+												.col-6.text-center
+													+img('img/sOurPartners-img-2.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-1.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-4.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-3.png')
+						+e.slider-wrap
+							+e.head
+								.row
+									.col
+										+e.title!= secondTitle
+									.col-auto
+										+e.arrow-wrap
+											+arrow
+							+e.body
+								+e.swiper--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.swiper-row.row
+												.col-6.text-center
+													+img('img/sOurPartners-img-5.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-6.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-7.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-8.png')
+										+e.slide.swiper-slide
+											+e.swiper-row.row
+												.col-6.text-center
+													+img('img/sOurPartners-img-6.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-5.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-8.png')
+												.col-6.text-center
+													+img('img/sOurPartners-img-7.png')
 				.col-md-6
 					+e.wrap
 						+img('img/svg/sOurPartners-img-1.svg')

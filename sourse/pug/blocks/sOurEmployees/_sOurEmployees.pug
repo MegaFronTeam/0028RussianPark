@@ -15,7 +15,7 @@ mixin sOurEmployees(data)
 						+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay=`50 * ${i}`)
 							+e.img-wrap
 								.img-wrap-center
-									+img(`img/sOurEmployees-img-${i}.png`)
+									+img(`img/sOurEmployees-img-${i}.png`, 'bg')
 							+e.title!= title
 							p!= text
 					+slide(1, 'Клюев Сергей', 'Генеральный директор')

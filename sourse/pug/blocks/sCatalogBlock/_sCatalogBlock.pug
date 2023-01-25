@@ -7,12 +7,13 @@ mixin sCatalogBlock(data)
 			+e.grid-container
 				mixin item(img, text, i)
 					+e.item(href='#' data-aos="fade-up" data-aos-delay=`50 * ${i}`)
-						+e.text-wrap
-							+img(`img/svg/catalog-${i}.svg`)
-							!= text
-						+e.img-wrap
-							.img-wrap-center
-								+img(`img/${img}`)
+						+e.item-wrap
+							+e.text-wrap
+								+img(`img/svg/catalog-${i}.svg`)
+								!= text
+							+e.img-wrap
+								.img-wrap-center
+									+img(`img/${img}`)
 				+item('sCatalogBlock-img-1.png', 'Входные группы и арки', '1')
 				+item('sCatalogBlock-img-2.png', 'Перголы для парка', '2')
 				+item('sCatalogBlock-img-3.png', 'Беседки для парка', '3')

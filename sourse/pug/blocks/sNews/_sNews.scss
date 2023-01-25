@@ -4,7 +4,15 @@
 	--sPB: #{rem(4)};
 	--sTPB: #{rem(16)};
 	overflow: hidden;
+	&__container {
+		@include media-breakpoint-down(md) {
+			--c-g: 0;
+		}
+	}
 	.section-title {
+		@include media-breakpoint-down(md) {
+			padding: 0 rem(16);
+		}
 		.row {
 			align-items: center;
 		}
@@ -17,9 +25,15 @@
 	}
 	&__swiper {
 		overflow: visible;
+		@include media-breakpoint-down(md) {
+			margin-right: rem(-4);
+		}
 	}
 	&__slide{
 		max-width: rem(330);
+		@include media-breakpoint-down(md) {
+			width: calc((100% / 2) - rem(4));
+		}
 	}
 	.card-item {
 		--ratio: 1/1;
