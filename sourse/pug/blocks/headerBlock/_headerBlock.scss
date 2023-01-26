@@ -3,6 +3,7 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	overflow: hidden;
 	@include block(360, 328);
 	@include media-breakpoint-up(md) {
 		--ratio: 408/992;
@@ -36,6 +37,10 @@
 	video {
 		object-fit: cover;
 		background-color: $gray-900;
+		@include media-breakpoint-down(md) {
+			height: 136%;
+			top: -18%;
+		}
 	}
 	.section-title{
 		color: #fff;

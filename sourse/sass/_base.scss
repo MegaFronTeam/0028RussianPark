@@ -142,7 +142,7 @@ body {
 	.main-center-wrap {
 		flex-grow: 1;
 		position: relative;
-		overflow: hidden;
+		// overflow: hidden;
 		width: 100%;
 		@include media-breakpoint-up(md) {
 			width: calc(100% - rem(288));

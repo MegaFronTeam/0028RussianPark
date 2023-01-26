@@ -31,7 +31,7 @@
 		margin-right: rem(4);
 		@include media-breakpoint-up(md) {
 			width: calc(100% / 3 + rem(54) - rem(4));
-			max-width: calc(rem(330) + rem(54));
+			// max-width: calc(rem(330) + rem(54));
 		}
 		p {
 			font-size: rem(13);
