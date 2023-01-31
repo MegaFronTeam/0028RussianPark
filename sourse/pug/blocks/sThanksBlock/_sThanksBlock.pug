@@ -15,10 +15,7 @@ mixin sThanksBlock(data)
 						+e.slide.swiper-slide(data-aos="fade-up" data-aos-delay='0')
 							+e.img-wrap(href=`img/sThanksBlock-img-lg-${i}.png` data-fancybox="gallery")
 								.img-wrap-center
-									+img(`img/sThanksBlock-img-${i}.png`, 'bg')
-					- for(let i = 1; i <=6; i++)
+									+img(`img/sThanksBlock-img-lg-${i}.png`, 'bg')
+					- for(let i = 1; i <=8; i++)
 						+slide(i)
-					+slide(5)
-					+slide(5)
-					+slide(5)
 	// end sThanksBlock
