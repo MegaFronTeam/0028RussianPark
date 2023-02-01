@@ -14,13 +14,20 @@
 		// --sPB: #{rem(31)};
 		--sPT: #{rem(0)};
 		--sPB: #{rem(0)};
-		@include block(992, 664);
 		
 		background-color: $gray-200;
 		min-height: rem(664);
 		font-size: calc(15px + 0.1vw + 0.149vh);
 	}
-	@include media-breakpoint-up(xxl) {
+	&__wrapper {
+		@include media-breakpoint-up(md) {
+			max-width: rem(1200);
+			@include block(992, 664);
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			flex-grow: 1;
+		}
 	}
 	&__container {
 		width: 100%;
@@ -92,10 +99,10 @@
 			// top: 47.5%;
 			top: 50%;
 			transform: translateY(-50%);
-			// width: rem(1246);
-			// width: 100%;
-			// width: 70em;
-			width: calc(100vw - rem(288));
+			width: 88em;
+		}
+		div {
+			display: inline;
 		}
 	}
 	.popover-toggle {
@@ -177,7 +184,7 @@
 		position: absolute;
 		color: #fff;
 		pointer-events: none !important;
-		transform: translate(-50%, -50%)!important;
+		// transform: translate(-50%, -50%)!important;
 		// @include media-breakpoint-up(xxl) {
 		// 	transform: translate(-50%,-50%)!important;
 		// }

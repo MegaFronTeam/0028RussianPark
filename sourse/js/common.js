@@ -565,6 +565,9 @@ function eventHandler() {
  
 		let popoverContent = {
 			title: popoverTriggerEl.dataset.bsContent,
+			projects: popoverTriggerEl.dataset.projects,
+			href: popoverTriggerEl.dataset.href,
+			linkText: popoverTriggerEl.dataset.linkText,
 			// smu: popoverTriggerEl.dataset.smu,
 			// sno: popoverTriggerEl.dataset.sno,
 			// mu: popoverTriggerEl.dataset.mu, 
@@ -577,8 +580,8 @@ function eventHandler() {
 		`
 			<div class="sMap__popover">
 				<div class="sMap__title">${popoverContent.title}</div>
-				<div class="sMap__text">20 проектов</div>
-				<a href="#">Перейти в портфолио</a>
+				<div class="sMap__text">${popoverContent.projects}</div>
+				<a href="${popoverContent.href}">${popoverContent.linkText}</a>
 			</div>
 		`;
 		const popover =  new bootstrap.Popover(popoverTriggerEl, {
