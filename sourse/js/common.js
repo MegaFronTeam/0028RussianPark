@@ -521,7 +521,7 @@ function eventHandler() {
 		}
 	});
 
-	let mapLinks = document.querySelectorAll('.popover-toggle');
+	let mapLinks = document.querySelectorAll('[data-bs-toggle="popover"]');
 	if(mapLinks) {
 		for (const mapLink of mapLinks) {
 			mapLink.addEventListener('click', function(e) {
@@ -548,7 +548,7 @@ function eventHandler() {
 			})
 		}
 		document.addEventListener('mouseup', function(event) {
-			let popoverLink = event.target.closest('.popover-toggle');
+			let popoverLink = event.target.closest('[data-bs-toggle="popover"]');
 			let mapPinCitys = document.querySelectorAll('.sMap__pin');
 			if(!popoverLink) {
 				for (let mapLink of mapLinks) {

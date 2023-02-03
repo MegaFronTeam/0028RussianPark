@@ -7,6 +7,7 @@
 		--sPT: #{rem(18)};
 	}
 	.media-content {
+		position: relative;
 		margin-bottom: rem(48);
 		&__img-wrap {
 			@include block(896, 530);
@@ -18,7 +19,21 @@
 			}
 		}
 		&__arrow-wrap {
+			position: absolute;
+			bottom: 0;
+			right: 0;
 			display: flex;
+			z-index: 1;
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: calc(100% + rem(40));
+				height: 100%;
+				top: 0;
+				right: 0;
+				background-color: #fff;
+			}
 		}
 		span {
 			font-size: rem(13);

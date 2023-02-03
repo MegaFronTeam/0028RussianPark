@@ -101,8 +101,17 @@
 			transform: translateY(-50%);
 			width: 88em;
 		}
-		div {
-			display: inline;
+		[data-bs-toggle] {
+			outline: none;
+			@include mt;
+			fill: $gray-500;
+			cursor: pointer;
+			&:hover, &.active {
+				fill: #553C27;
+			}
+		}
+		.filled {
+			fill: $gray-500;
 		}
 	}
 	.popover-toggle {
@@ -180,6 +189,8 @@
 		--bs-btn-font-size: #{rem(14)};
 	}
 	&__pin {
+		// display: none;
+
 		@include mt;
 		position: absolute;
 		color: #fff;
