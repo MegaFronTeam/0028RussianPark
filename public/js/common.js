@@ -547,19 +547,10 @@ function eventHandler() {
 
 			})
 		}
-		document.addEventListener('mouseup', function(event) {
-			let popoverLink = event.target.closest('[data-bs-toggle="popover"]');
-			let mapPinCitys = document.querySelectorAll('.sMap__pin');
-			if(!popoverLink) {
-				for (let mapLink of mapLinks) {
-					mapLink.classList.remove('active');
-				}
-				for (let mapPinCity of mapPinCitys) {
-					mapPinCity.classList.remove('active');
-				}
-			}
-		})
+		
+
 	}
+	
 	var popoverTriggerList =  document.querySelectorAll('[data-bs-toggle="popover"]');
 		for (const popoverTriggerEl of popoverTriggerList) {
  
@@ -596,7 +587,36 @@ function eventHandler() {
 			placement: 'top',
 			delay: { "show": 100, "hide": 100 },
 		})
-	};
+		if (popoverTriggerEl.dataset.bsContent == "Москва"){
+			bootstrap.Popover.getInstance(popoverTriggerEl).show();
+			popoverTriggerEl.classList.add("active");
+			document.querySelector('[data-city="Москва" ]').classList.add("active");
+		}
+		else{
+			popoverTriggerEl.addEventListener('show.bs.popover', () => {
+				bootstrap.Popover.getInstance('[data-bs-content="Москва"]').hide();
+			})
+		}
+		// bootstrap.Popover.getOrCreateInstance(popoverTriggerEl).hide();
+		};
+
+
+
+	// document.addEventListener('mouseup', function (event) {
+	// 	let popoverLink = event.target.closest('[data-bs-toggle="popover"]');
+	// 	let mapPinCitys = document.querySelectorAll('.sMap__pin');
+	// 	if (!popoverLink) {
+	// 		for (let mapLink of mapLinks) {
+	// 			mapLink.classList.remove('active');
+	// 		}
+	// 		for (let mapPinCity of mapPinCitys) {
+	// 			mapPinCity.classList.remove('active');
+	// 		}
+	// 	}
+	// })
+ 
+
+
 
 	let showMoreText = document.querySelector('.toggle-text-js');
 	if(showMoreText) {
