@@ -564,15 +564,20 @@ function eventHandler() {
 			// mu: popoverTriggerEl.dataset.mu, 
 			// link: popoverTriggerEl.dataset.link, 
 		}
-		let users = `<div class="col-auto pr-0 users-col"> </div>`
-
-		let user = `<div class="col-auto pr-0    user-col" > </div>`
+			let link = (href, linkText) => {
+				if (linkText && href) {
+					return `<a href="${href}">${linkText}</a>`;
+				}
+				else {
+					return '';
+				}
+			};
 		let popoverInner = 
 		`
 			<div class="sMap__popover">
 				<div class="sMap__title">${popoverContent.title}</div>
 				<div class="sMap__text">${popoverContent.projects}</div>
-				<a href="${popoverContent.href}">${popoverContent.linkText}</a>
+				${link(popoverContent.href, popoverContent.linkText)}
 			</div>
 		`;
 		const popover =  new bootstrap.Popover(popoverTriggerEl, {
